@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/root.ll_vertical">
+    <EditText style="@style/add_psychic_name"
+            android:id="@+id/add_psychic_name"
+            android:hint="@string/_enter_psyker_name"/>
+    <EditText style="@style/add_psychic_mastery_lvl"
+            android:id="@+id/add_psychic_mastery_lvl"
+            android:hint="@string/_enter_mastery_lvl"/>
+    <Button style="@style/wide_element"
+            android:id="@+id/add_psychic_powers"
+            android:text="@string/_psyker__class"/>
+    <Button style="@style/wide_element"
+            android:id="@+id/add_psychic_select_psyker"
+            android:text="@string/_add__special__psyker"/>
+    <ScrollView style="@style/root">
+        <LinearLayout style="@style/item_psyker_powers"
+                android:id="@+id/add_psychic_powers_list"
+                android:visibility="gone"
+                android:divider="@drawable/powers_divider"
+                android:showDividers="middle"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin">
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

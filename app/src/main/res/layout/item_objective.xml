@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/root.ll_vertical">
+    <TextView style="@style/objective_title"
+            android:id="@+id/objective_title"/>
+    <TextView style="@style/objective_type"
+            android:id="@+id/objective_type"/>
+    <TextView style="@style/objective_description"
+            android:id="@+id/objective_description"/>
+</LinearLayout>

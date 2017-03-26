@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/root.ll_vertical"
+        android:id="@+id/add_champion_root">
+    <RelativeLayout style="@style/add_champion_top_bar">
+        <EditText style="@style/add_champion_name"
+                android:id="@+id/add_champion_name"
+                android:hint="@string/_champion_name"/>
+        <ImageView style="@style/delete_champion_button"
+                android:id="@+id/delete_last_champion_reward"
+                android:src="@drawable/cancel_all_button"/>
+        <ImageView style="@style/add_champion_button"
+                android:id="@+id/add_champion_reward"
+                android:src="@drawable/add_button"/>
+    </RelativeLayout>
+    <ListView style="@style/add_champion_rewards_list"
+            android:id="@+id/add_champion_rewards_list">
+    </ListView>
+</LinearLayout>

@@ -1,0 +1,21 @@
+{ "sanguine_sword": {
+    "tile": "Sanguine Sword............Warp Charge 1",
+    "descr": "Sanguine Sword is a blessing that targets Mephiston. Whilst the power is in effect, his force sword has Strength 10.",
+    "have_table": false
+  },
+  "hammerhand": {
+    "tile": "HAMMERHAND............Warp Charge 1",
+    "descr": "Hammerhand is a blessing that targets the Psyker. Whilst the power is in effect, the Psyker and his unit have +2 Strength.",
+    "have_table": false
+  },
+  "sanctuary": {
+    "tile": "SANCTUARY............Warp Charge 1",
+    "descr": "sanctuary is a blessing that targets the Psyker. Whilst the power is in effect the Psyker and all models in his unit receive a +1 bonus to their invulnerable save (models that do not have an invulnerable save gain a 6+ invulnerable save whilst this power is in effect instead). In addition, all units with the Daemon special rule (friend or foe) treat all terrain, including open ground, within 12\" of the Psyker as dangerous terrain.",
+    "have_table": false
+  },
+  "dark excommunication": {
+    "tile": "DARK EXCOMMUNICATION............Warp Charge 1",
+    "descr": "Dark Excommunication is a malediction that is used at the start of the Fight sub-phase in any Assault phase (friendly or enemy) and targets a single enemy unit in base contact with the Psyker. If successful, all Daemonic Gifts (see Codex: Chaos Daemons) possessed by models in the chosen unit cease to work until the end of the phase.",
+    "have_table": false
+  }
+}

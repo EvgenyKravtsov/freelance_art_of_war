@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/root.ll_vertical"
+        android:background="@color/black">
+    <EditText style="@style/main_menu_search_field.search_result"
+            android:id="@+id/search_result_search_field"/>
+    <ListView style="@style/search_result_list"
+            android:id="@+id/search_result_list">
+    </ListView>
+</LinearLayout>

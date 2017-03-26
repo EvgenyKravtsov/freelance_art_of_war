@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/root.ll_vertical.center_horizontal.section_root">
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+        <ImageView android:id="@+id/psychic_powers_delete_all"
+            style="@style/chaos_boons_top_bar_button_cancel"
+                android:src="@drawable/cancel_all_button"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"/>
+        <ImageView android:id="@+id/psychic_powers_manual_button"
+               style="@style/chaos_boons_top_bar_button_add"
+                android:src="@drawable/quesmark_black"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"/>
+    </RelativeLayout>
+    <Button android:id="@+id/psychic_powers_add_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:text="@string/_create__psyker"/>
+    <ListView android:id="@+id/psychic_powers_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/divider_blue"
+            android:dividerHeight="1px">
+    </ListView>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/root.ll_vertical.center_horizontal.randomizer_menu">
+    <View style="@style/randomizer_menu_placeholder"/>
+
+    <Button style="@style/randomizer_menu_button"
+            android:id="@+id/randomizer_menu_psychic_powers_randomizer"
+            android:text="@string/_psychic_powers_randomizer"/>
+
+    <View style="@style/randomizer_menu_placeholder"/>
+
+    <Button style="@style/randomizer_menu_button"
+            android:id="@+id/randomizer_menu_chaos__boons_randomizer"
+            android:text="@string/_chaos__boons_randomizer"/>
+
+    <View style="@style/randomizer_menu_placeholder"/>
+
+    <Button style="@style/randomizer_menu_button"
+            android:id="@+id/randomizer_menu_tactical_objectives_randomizer"
+            android:text="@string/_tactical_objectives_randomizer"/>
+
+    <View style="@style/randomizer_menu_placeholder"/>
+</LinearLayout>

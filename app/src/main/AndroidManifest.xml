@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="art.of.war.tesseractumstudios" >
+
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <application
+        android:name="com.tesseractumstudios.warhammer_artofwar.tools.WarhammerArtofwar"
+        android:allowBackup="true"
+        android:icon="@drawable/image_512"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true">
+        <activity
+                android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.MainMenu"
+                android:label="@string/app_name"
+                android:windowSoftInputMode="stateHidden"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.Viewer"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize">
+
+        </activity>
+        <activity android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.RulesSubmenuActivity"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <activity android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.Armory"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <activity android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.ArmorySubmenu"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize">
+        </activity>
+        <activity android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.FractionRulesActivity"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.FractionRulesSumbmenuActivity"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.RulesActivity"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.ChartsAndTablesActivity"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.RandomizerMenuActivity"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.ObjectivesRandomizerActivity"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.DoneObjectivesActivity"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.SearchResultActivity"
+                android:windowSoftInputMode="stateHidden"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.ChaosBoonsRandomizerActivity"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.tesseractumstudios.warhammer_artofwar.Screens.Activities.PsychicPowersRandomizerActivity"
+                android:screenOrientation="portrait"
+                android:configChanges="keyboardHidden|orientation|screenSize"/>
+    </application>
+</manifest>

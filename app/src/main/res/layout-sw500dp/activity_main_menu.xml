@@ -1,0 +1,54 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/root"
+        tools:context=".MainMenu"
+        android:background="@color/black">
+    <ImageView style="@style/main_menu_background"
+            android:id="@+id/bg"
+            android:src="@drawable/menu_1200x1920"/>
+    <LinearLayout style="@style/root.ll_vertical.center_horizontal">
+        <Space style="@style/main_menu_wide_vertical_space"
+                android:layout_weight="200"/>
+        <FrameLayout style="@style/main_menu_search_layout">
+            <EditText style="@style/main_menu_search_field"
+                    android:id="@+id/main_menu_search_field"/>
+        </FrameLayout>
+        <Space style="@style/main_menu_wide_vertical_space"
+                android:layout_weight="463"/>
+        <LinearLayout style="@style/main_menu_ll_buttons"
+                android:id="@+id/ll">
+            <LinearLayout style="@style/main_menu_wide_buttons_line">
+                <Space style="@style/main_menu_wide_side_space"/>
+                <ImageButton style="@style/main_menu_wide_button"
+                        android:layout_weight="273"
+                        android:id="@+id/main_menu_randomizer_button"
+                        android:src="@drawable/randomizer_long_wide"/>
+                <Space style="@style/main_menu_wide_side_space"/>
+            </LinearLayout>
+            <LinearLayout style="@style/main_menu_wide_buttons_line">
+                <Space style="@style/main_menu_wide_side_space"/>
+                <ImageButton style="@style/main_menu_wide_button"
+                        android:id="@+id/main_menu_rules_button"
+                        android:src="@drawable/rules_wide"/>
+                <Space style="@style/main_menu_wide_center_space"/>
+                <ImageButton style="@style/main_menu_wide_button"
+                        android:id="@+id/main_menu_fraction_rules_button"
+                        android:src="@drawable/fractionrules_wide"/>
+                <Space style="@style/main_menu_wide_side_space"/>
+            </LinearLayout>
+            <LinearLayout style="@style/main_menu_wide_buttons_line">
+                <Space style="@style/main_menu_wide_side_space"/>
+                <ImageButton style="@style/main_menu_wide_button"
+                        android:id="@+id/main_menu_armory_button"
+                        android:src="@drawable/armory_wide"/>
+                <Space style="@style/main_menu_wide_center_space"/>
+                <ImageButton style="@style/main_menu_wide_button"
+                        android:id="@+id/main_menu_chart_tables_button"
+                        android:src="@drawable/chart_tables_wide"/>
+                <Space style="@style/main_menu_wide_side_space"/>
+            </LinearLayout>
+        </LinearLayout>
+        <Space style="@style/main_menu_wide_vertical_space"
+                android:layout_weight="166"/>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/root.ll_vertical">
+    <TextView style="@style/item_special_psyker"
+            android:id="@+id/item_special_psyker_name"/>
+</LinearLayout>

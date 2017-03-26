@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/root.ll_vertical">
+    <TextView style="@style/additional_objectives_description"
+            android:text="Select secondary objective"/>
+    <LinearLayout style="@style/additional_objectives_buttons_ll">
+        <Button style="@style/additional_objectives_button"
+                android:id="@+id/additional_objectives_1"
+                android:text="@string/_secondary_obj_1"/>
+        <Button style="@style/additional_objectives_button"
+                android:id="@+id/additional_objectives_2"
+                android:text="@string/_secondary_obj_2"/>
+        <Button style="@style/additional_objectives_button"
+                android:id="@+id/additional_objectives_3"
+                android:text="@string/_secondary_obj_3"/>
+    </LinearLayout>
+</LinearLayout>

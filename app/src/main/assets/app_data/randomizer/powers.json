@@ -1,0 +1,686 @@
+{"biomancy" : [
+  {
+    "isPrimaris": true,
+    "title": "SMITE - Warp Charge............1",
+    "descr": "Smite is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "18\"",
+    "table_s": "4",
+    "table_ap": "2",
+    "table_type": "Assault 4"
+  },
+  {
+    "title": "1 - IRON ARM - Warp Charge............1",
+    "descr": "Iron Arm is a blessing that targets the Psyker. Whilst the power is in effect, the Psyker has +3 to his Strength and Toughness and he gains the Smash special rule.",
+    "have_table": false
+  },
+  {
+    "title": "2 - ENFEEBLE - Warp Charge............1",
+    "descr": "Enfeeble is a malediction that targets a single enemy unit within 24\". Whilst the power is in effect, the target unit suffers a -1 penalty to both Strength and Toughness, and treats all terrain (even open ground) as difficult terrain.",
+    "have_table": false
+  },
+  {
+    "title": "3 - LIFE LEECH - Warp Charge............1",
+    "descr": "If Life Leech causes at least one unsaved Wound, the Psyker, or one friendly model within 6&quot; of the Psyker, immediately regains a Wound lost earlier in the battle (up to their starting number of Wounds). Life Leech is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "18\"",
+    "table_s": "6",
+    "table_ap": "2",
+    "table_type": "Assault 2"
+  },
+  {
+    "title": "4 - WARP SPEED - Warp Charge............1",
+    "descr": "Warp Speed is a blessing that targets the Psyker. Whilst the power is in effect, the Psyker has +3 to his Initiative and Attacks and he gains the Fleet special rule.",
+    "have_table": false
+  },
+  {
+    "title": "5 - ENDURANCE - Warp Charge............2",
+    "descr": "Endurance is a blessing that targets a single friendly unit within 24\". Whilst the power is in effect, all models in the target unit gain the Eternal Warrior, Feel No Pain (4+) and Relentless special rules.",
+    "have_table": false
+  },
+  {
+    "title": "6 - HAEMORRHAGE - Warp Charge............2",
+    "descr": "Haemorrhage is a focussed witchfire power with a range of 18\". The target must pass two separate Toughness tests or suffer a Wound with no armour or cover saves allowed for each test that was failed. If the target is removed as a casualty, randomly select another model (friend or foe) within 2\" of him. That model must pass a single Toughness test or suffer a Wound with no armour or cover saves allowed. If that model is removed as a casualty, continue the process of selecting another model and taking a single Toughness test until a either a model survives or there are no more suitable targets within range.",
+    "have_table": false
+  }],
+  "daemonology (sanctic)" : [{
+    "isPrimaris": true,
+    "title": "BANISHMENT - Warp Charge............1",
+    "descr": "Banishment is a malediction that targets a single unit with the Daemon special rule within 24\". Whilst this power is in effect, all models in the target unit suffer a -1 penalty to their invulnerable save (normally reducing it to 6+). This is cumulative with any other modifiers to a Daemon’s invulnerable save, but cannot make it worse than 6+.",
+    "have_table": false
+  },
+  {
+    "title": "1 - GATE OF INFINITY - Warp Charge............1",
+    "descr": "Gate of Infinity is a blessing that targets the Psyker. Unless the target is Zooming or Swooping, remove the target and his unit from the board. It then immediately arrives anywhere on the board using the rules for Deep Strike.",
+    "have_table": false
+  },
+  {
+    "title": "2 - HAMMERHAND - Warp Charge............1",
+    "descr": "Hammerhand is a blessing that targets the Psyker. Whilst the power is in effect, the Psyker and his unit have +2 Strength.",
+    "have_table": false
+  },
+  {
+    "title": "3 - SANCTUARY - Warp Charge............1",
+    "descr": "Sanctuary is a blessing that targets the Psyker. Whilst the power is in effect the Psyker and all models in his unit receive a +1 bonus to their invulnerable save (models that do not have an invulnerable save gain a 6+ invulnerable save whilst this power is in effect instead). In addition, all units with the Daemon special rule (friend or foe) treat all terrain, including open ground, within 12\" of the Psyker as dangerous terrain.",
+    "have_table": false
+  },
+  {
+    "title": "4 - PURGE SOUL - Warp Charge............1",
+    "descr": "Purge Soul is a focussed witchfire power with a range of 24\". Both the Psyker and the target model roll a D6 and add their respective Leadership values. If the target’s total is greater than the Psyker’s total, nothing happens. If the Psyker’s total is greater than or equal to the target’s total, the target model suffers an automatic Wound with no armour or cover saves allowed. Purge Soul has no effect on vehicles.",
+    "have_table": false
+  },
+  {
+    "title": "5 - CLEANSING FLAME - Warp Charge............2",
+    "descr": "Cleansing Flame is a nova power with the following profile:",
+    "have_table": true,
+    "table_range": "9\"",
+    "table_s": "5",
+    "table_ap": "4",
+    "table_type": "Assault 2D6, Ignores cover, Soul Blaze"
+  },
+  {
+    "title": "6 - VORTEX OF DOOM - Warp Charge............3",
+    "descr": "Vortex of Doom is a witchfire power with the profile below. If, when using this power, the Psyker fails his Psychic test, he automatically suffers Perils of the Warp.",
+    "have_table": true,
+    "table_range": "12\"",
+    "table_s": "D",
+    "table_ap": "1",
+    "table_type": "Assault 1, Blast, Vortex"
+  }],
+  "divination" : [{
+    "isPrimaris": true,
+    "title": "PRESCIENCE - Warp Charge............2",
+    "descr": "Prescience is a blessing that targets a single friendly unit within 12\". Whilst the power is in effect, the target unit can re-roll all failed To Hit rolls.",
+    "have_table": false
+  },
+  {
+    "title": "1 - FOREBODING - Warp Charge............1",
+    "descr": "Foreboding is a blessing that targets the Psyker. Whilst this power is in effect, the Psyker and his unit have the Counter-attack special rule and fire Overwatch using their full Ballistic Skill, rather than Ballistic Skill 1. Note that this does not allow weapons that could not normally fire Overwatch to do so.",
+    "have_table": false
+  },
+  {
+    "title": "2 - FOREWARNING - Warp Charge............1",
+    "descr": "Forewarning is a blessing that targets a single friendly unit within 12\". Whilst the power is in effect, the target unit has a 4+ invulnerable save.",
+    "have_table": false
+  },
+  {
+    "title": "3 - PERFECT TIMING - Warp Charge............1",
+    "descr": "Perfect Timing is a blessing that targets the Psyker. Whilst this power is in effect, the Psyker and his unit’s weapons have the Ignores Cover special rule.",
+    "have_table": false
+  },
+  {
+    "title": "4 - PRECOGNITION - Warp Charge............1",
+    "descr": "Precognition is a blessing that targets the Psyker. Whilst the power is in effect, the Psyker re-rolls all failed To Hit and To Wound rolls. In addition, while the power is in effect, the Psyker re-rolls failed saving throws.",
+    "have_table": false
+  },
+  {
+    "title": "5 - MISFORTUNE - Warp Charge............2",
+    "descr": "Misfortune is a malediction that targets a single enemy unit within 24\". Whilst the power is in effect, all attacks that hit the target unit have the Rending special rule.",
+    "have_table": false
+  },
+  {
+    "title": "6 - SCRIER’S GAZE - Warp Charge............2",
+    "descr": "Scrier’s Gaze is a blessing that targets the Psyker. Whilst the power is in effect, you can re-roll the dice when rolling for Reserves, Outflank and when any of your units identifies a Mysterious Objective. In addition, if the mission has the Tactical Objectives special rule, you can immediately choose to discard one of your active Tactical Objectives and generate a new one.",
+    "have_table": false
+  }],
+  "malefic powers" : [{
+    "isPrimaris": true,
+    "title": "SUMMONING - Warp Charge............3",
+    "descr": "Summoning is a conjuration with a range of 12\" that creates one of the following units (your choice): 10 Bloodletters of Khorne, 10 Pink Horrors of Tzeentch, 10 Plaguebearers of Nurgle, 10 Daemonettes of Slaanesh, 5 Flesh Hounds of Khorne, 3 Flamers of Tzeentch, 3 Nurgling swarms or 5 Seekers of Slaanesh. Rules for these units can be found in Codex: Chaos Daemons.",
+    "have_table": false
+  },
+  {
+    "title": "1 - CURSED EARTH - Warp Charge............1",
+    "descr": "Cursed Earth is a blessing that targets the Psyker. Whilst the power is in effect, all models with the Daemon special rule (friend or foe) within 12\" of the Psyker have a +1 bonus to their invulnerable save (normally increasing it to 4+). This is cumulative with any other modifiers to a Daemon’s invulnerable save. In addition, whilst the power is in effect, friendly units with the Daemon special rule will not scatter when arriving from Deep Strike Reserve so long as the first model is placed within 12\" of the Psyker.",
+    "have_table": false
+  },
+  {
+    "title": "2 - DARK FLAME - Warp Charge............1",
+    "descr": "Dark Flame is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "Template;",
+    "table_s": "4",
+    "table_ap": "5",
+    "table_type": "Assault 1, Soul Blaze, Torrent"
+  },
+  {
+    "title": "3 - INFERNAL GAZE - Warp Charge............1",
+    "descr": "Infernal Gaze is a beam with the following profile:",
+    "have_table": true,
+    "table_range": "18\"",
+    "table_s": "3",
+    "table_ap": "4",
+    "table_type": "Assault 1, Armourbane, Fleshbane"
+  },
+  {
+    "title": "4 - SACRIFICE - Warp Charge............1",
+    "descr": "Sacrifice is a conjuration with a range of 6\" that creates one of the following units (your choice): 1 Herald of Khorne, 1 Herald of Tzeentch, 1 Herald of Nurgle or 1 Herald of Slaanesh, with up to 30 points’ worth of options. Rules for these units can be found in Codex: Chaos Daemons. If this power is successfully manifested, one friendly model within 6\" of the Psyker (or the Psyker himself) immediately suffers a single Wound with no saves of any kind allowed.",
+    "have_table": false
+  },
+  {
+    "title": "5 - INCURSION - Warp Charge............3",
+    "descr": "Incursion is a conjuration with a range of 12\" that creates one of the following units (your choice): 3 Bloodcrushers of Khorne, 3 Screamers of Tzeentch, 3 Plague Drones of Nurgle or 3 Fiends of Slaanesh. Rules for these units can be found in Codex: Chaos Daemons.",
+    "have_table": false
+  },
+  {
+    "title": "6 - POSSESSION - Warp Charge............3",
+    "descr": "Possession is a conjuration with a range of 6\" that creates one of the following new units (your choice): 1 Bloodthirster, 1 Lord of Change, 1 Great Unclean One or 1 Keeper of Secrets. Rules for these units can be found in Codex: Chaos Daemons. If this power is successfully manifested, the Psyker is immediately removed as a casualty (if the Psyker was part of a unit with the Brotherhood of Psykers/Sorcerers special rule, remove the entire unit as casualties). If, when using this power, the Psyker fails his Psychic test, he automatically suffers Perils of the Warp.",
+    "have_table": false
+  }],
+  "pyromancy" : [{
+    "isPrimaris": true,
+    "title": "FLAME BREATH - Warp Charge 1",
+    "descr": "Flame Breath is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "Template",
+    "table_s": "5",
+    "table_ap": "4",
+    "table_type": "Assault 1, Soul Blaze"
+  },
+  {
+    "title": "1 - FIERY FORM - Warp Charge 1",
+    "descr": "Fiery Form is a blessing that targets the Psyker. Whilst the power is in effect, the Psyker gains a 4+ invulnerable save and his close combat attacks have the Soul Blaze special rule. Whilst the power is in effect, the Psyker re-rolls failed To Wound rolls inflicted by any further Pyromancy powers he manifests.",
+    "have_table": false
+  },
+  {
+    "title": "2 - FIRE SHIELD - Warp Charge 1",
+    "descr": "Fire Shield is a blessing that targets a single friendly unit within 24\". Whilst the power is in effect, the target unit has a 4+ cover save and all enemy units treat all terrain within 6\" of the target as Dangerous Terrain (even open ground).",
+    "have_table": false
+  },
+  {
+    "title": "3 - SPONTANEOUS COMBUSTION - Warp Charge 1",
+    "descr": "Spontaneous Combustion is a focussed witchfire power with a range of 18\". The target model suffers a Strength 6 AP3 hit with the Soul Blaze special rule. If the model is slain by this hit in the Psychic phase, centre the small blast marker over the target before removing him as a casualty. All other models under the marker suffer a Strength 5 AP4 hit with the Ignores Cover and Soul Blaze special rules.",
+    "have_table": true,
+    "table_range": "18\"",
+    "table_s": "6",
+    "table_ap": "2",
+    "table_type": "Assault 2"
+  },
+  {
+    "title": "4 - SUNBURST - Warp Charge 1",
+    "descr": "Sunburst is a nova power with the following profile:",
+    "have_table": true,
+    "table_range": "9\"",
+    "table_s": "4",
+    "table_ap": "5",
+    "table_type": "Assault 2D6, Soul Blaze, Ignores Cover"
+  },
+  {
+    "title": "5 - INFERNO- Warp Charge 2",
+    "descr": "Inferno is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "24\"",
+    "table_s": "4",
+    "table_ap": "5",
+    "table_type": "Assault 1, Soul Blaze, large Blast, Ignores Cover"
+  },
+  {
+    "title": "6 - MOLTEN BEAM - Warp Charge 2",
+    "descr": "Molten Beam is a beam with the following profile:",
+    "have_table": true,
+    "table_range": "12\"",
+    "table_s": "8",
+    "table_ap": "1",
+    "table_type": "Assault 1, Melta"
+  }],
+  "telekinesis" : [{
+    "isPrimaris": true,
+    "title": "ASSAIL - Warp Charge 1",
+    "descr": "Assail is a beam with the following profile:",
+    "have_table": true,
+    "table_range": "18\"",
+    "table_s": "6",
+    "table_ap": "-",
+    "table_type": "Assault 1, Strikedown"
+  },
+  {
+    "title": "1 - CRUSH - Warp Charge 1",
+    "descr": "Crush is a focussed witchfire power with a range of 18\". Roll 2D6. The target model suffers a hit with a Strength equal to the result (a result of an 11 or 12 wounds automatically or, in the case of a vehicle, causes an automatic penetrating hit) with an AP equal to the result of a separate D6 roll.",
+    "have_table": false
+  },
+  {
+    "title": "2 - OBJURATION MECHANICUM - Warp Charge 1",
+    "descr": "Objuration Mechanicum is a malediction that targets a single enemy unit within 24\". Whilst the power is in effect, all of the target’s ranged weapons have the Gets Hot special rule. In addition, if the target is a vehicle (or vehicle squadron), each vehicle in the unit suffers a single Strength 1 hit with the Haywire special rule.",
+    "have_table": false
+  },
+  {
+    "title": "3 - SHOCKWAVE - Warp Charge 1",
+    "descr": "Shockwave is a nova power with the following profile:",
+    "have_table": true,
+    "table_range": "9\"",
+    "table_s": "4",
+    "table_ap": "-",
+    "table_type": "Assault 2D6, Pinning"
+  },
+  {
+    "title": "4 - LEVITATION - Warp Charge 1",
+    "descr": "Levitation is a blessing that targets the Psyker. Unless the target is Zooming, Swooping or is locked in close combat, the Psyker and his unit immediately make a move of up to 12\". This move cannot end up on top of another unit or impassable terrain, but ignores intervening units, terrain etc. Any model that starts or ends this move in difficult terrain must take a Dangerous Terrain test. The Psyker and his unit cannot charge in the same turn that they use this power, and all models count as having moved in the Movement phase for the purposes of shooting weapons in the Shooting phase",
+    "have_table": false
+  },
+  {
+    "title": "5 - TELEKINE DOME - Warp Charge 2",
+    "descr": "Telekine Dome is a blessing that targets the Psyker. Whilst the power is in effect, the Psyker, and all friendly models within 12\" of the Psyker, have a 5+ invulnerable save against any shooting attack.",
+    "have_table": false
+  },
+  {
+    "title": "6 - PSYCHIC MAELSTROM - Warp Charge 2",
+    "descr": "Psychic Maelstrom is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "12\"",
+    "table_s": "10",
+    "table_ap": "1",
+    "table_type": "Assault 1, Barrage, Large Blast"
+  }],
+  "telepathy" : [{
+    "isPrimaris": true,
+    "title": "PSYCHIC SHRIEK - Warp Charge 1",
+    "descr": "Psychic Shriek is a witchfire power with a range of 18\". Roll 3D6 and subtract the target’s Leadership – the target unit suffers a number of Wounds equal to the result. Armour and cover saves cannot be taken against Wounds caused by Psychic Shriek.",
+    "have_table": false
+  },
+  {
+    "title": "1 - DOMINATE - Warp Charge 1",
+    "descr": "Dominate is a malediction that targets a single enemy unit within 24\". Whilst the power is in effect, the target unit must pass a Leadership test each time it attempts to move, manifest a psychic power, shoot, Run or declare a charge – if the test is failed, the action is forfeit and the unit can do nothing else that phase. A unit that fails this test when attempting to fire Overwatch does not fire any shots, but acts normally in the ensuing Fight sub-phase.",
+    "have_table": false
+  },
+  {
+    "title": "2 - MENTAL FORTITUDE - Warp Charge 1",
+    "descr": "Mental Fortitude is a blessing that targets a single friendly unit within 24\". If the target is falling back, it immediately Regroups. In addition, whilst the power is in effect, the target gains the Fearless special rule.",
+    "have_table": false
+  },
+  {
+    "title": "3 - TERRIFY - Warp Charge 1",
+    "descr": "Terrify is a malediction that targets a single enemy unit within 24\". Whilst the power is in effect, the target has a -1 penalty to their Leadership and treats all enemy units as having the Fear special rule. Furthermore, the target must take a Morale check at the end of the Psychic phase.",
+    "have_table": false
+  },
+  {
+    "title": "4 - SHROUDING - Warp Charge 1",
+    "descr": "Shrouding is a blessing that targets the Psyker. Whilst this power is in effect, the Psyker, and all friendly models within 6\" of the Psyker, have the Shrouded special rule.",
+    "have_table": false
+  },
+  {
+    "title": "5 - INVISIBILITY - Warp Charge 2",
+    "descr": "Invisibility is a blessing that targets a single friendly unit within 24\". Whilst the power is in effect, enemy units can only fire Snap Shots at the target unit and in close combat will only hit models in it on To Hit rolls of a 6.",
+    "have_table": false
+  },
+  {
+    "title": "6 - HALLUCINATION - Warp Charge 2",
+    "descr": "Hallucination is a malediction that targets a single enemy unit within 24\". Roll once this power has been successfully manifested to determine the manner of hallucinations the target is suffering from (roll once for the whole unit).",
+    "have_table": false
+  }],
+  "sanguinary" : [
+  {
+    "isPrimaris": true,
+    "title": "Quickening - Warp Charge............1",
+    "descr": "Quickening is a blessing that targets either the Psyker or a single friendly character within 12\" of the Psyker. Whilst this power is in effect, the target has the Fleet special rule and +D3 Initiative and Attacks (roll once for both characteristics).",
+    "have_table": false
+  },
+  {
+    "title": "1 - Fear of the Darkness - Warp Charge............1",
+    "descr": "Fear of the Darkness is a malediction that targets a single enemy unit within 12\". The target must immediately take a Morale check with a -2 Leadership modifier.",
+    "have_table": false
+  },
+  {
+    "title": "2 - Unleash Rage - Warp Charge............1",
+    "descr": "Unleash Rage is a blessing that targets a single friendly unit within 18\". Whilst the power is in effect, the target has the Rage special rule. If the target already has the Rage special rule, they instead have +1 Attack whilst this power is in effect.",
+    "have_table": false
+  },
+  {
+    "title": "3 - Shield of Sanguinius - Warp Charge............1",
+    "descr": "Shield of Sanguinius is a blessing that targets the Psyker. Whilst the power is in effect, all models in the Psyker’s unit have a 5+ invulnerable save.",
+    "have_table": false
+  },
+  {
+    "title": "4 - Blood Boil - Warp Charge............2",
+    "descr": "Blood Boil is a focussed witchfire power with a range of 18\". The target must take two Toughness tests; for each test that is failed the target loses a single Wound with no saves of any kind allowed. If the target is slain, centre the large blast marker over the target before removing him as a casualty. All other models under the marker suffer a Strength 4 AP5 hit with the Ignores Cover special rule.",
+    "have_table": false
+  },
+  {
+    "title": "5 - The Blood Lance - Warp Charge............2",
+    "descr": "The Blood Lance is a beam with the following profile:",
+    "have_table": true,
+    "table_range": "12\"",
+    "table_s": "8",
+    "table_ap": "1",
+    "table_type": "Assault 1, Lance"
+  },
+  {
+    "title": "6 - Wings of Sanguinius - Warp Charge............2",
+    "descr": "Wings of Sanguinius is a blessing that targets a single friendly Infantry unit within 12\". Unless locked in close combat, the target immediately makes a move of up to 12\". This move cannot end on top of another unit or impassable terrain, but ignores intervening units, terrain, etc. Any model that starts or ends this move in difficult terrain must take a Dangerous Terrain test. The target unit cannot charge in the same turn that this power is used, and all models in the unit count as having moved in the Movement phase for the purposes of shooting weapons in the Shooting phase.",
+    "have_table": true,
+    "table_range": "12\"",
+    "table_s": "8",
+    "table_ap": "1",
+    "table_type": "Assault 1, Lance"
+  }],
+  "interromancy" : [
+  {
+    "isPrimaris": true,
+    "title": "MIND WORM - Warp Charge............1",
+    "descr": "Mind Worm is a focussed witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "12\"",
+    "table_s": "6",
+    "table_ap": "2",
+    "table_type": "Assault 1, Ignores Cover, Sap Will",
+    "post_desr": "Sap Will: If a model suffers any unsaved Wounds from Mind Worm, its Weapon Skill,Ballistic Skill, Initiative and Leadership characteristics are reduced by 3 (to a minimum of 1) for the rest of the battle."
+  },
+  {
+    "title": "1 - SEED OF FEAR - Warp Charge............1",
+    "descr": "Seed of Fear is a malediction that targets all enemy units within 9\". Whilst the power is in effect, all target units must take Morale checks as well as Pinning and Fear tests on 3D6.",
+    "have_table": false
+  },
+  {
+    "title": "2 - RIGHTEOUS REPUGNANCE - Warp Charge............1",
+    "descr": "Righteous Repugnance is a blessing that targets a single friendly unit within 24\". Whilst the power is in effect, the target unit has the Rage special rule.",
+    "have_table": false
+  },
+  {
+    "title": "3 - AVERSION - Warp Charge............1",
+    "descr": "Aversion is a malediction that targets a single enemy unit within 24\". Whilst the power is in effect, the target unit can only fire Snap Shots.",
+    "have_table": false
+  },
+  {
+    "title": "4 - MAELSTROM OF MISERY - Warp Charge............2",
+    "descr": "Maelstrom of Misery is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "24\"",
+    "table_s": "1",
+    "table_ap": "2",
+    "table_type": "Assault 1, Blast, Neural Shock",
+    "post_descr" : "Neural Shock: Hits caused by this psychic power always wound on a 4+. This special rule has no effects on vehicles or buildings."
+  },
+  {
+    "title": "5 - TREPHINATION - Warp Charge............2",
+    "descr": "Trephination is a focussed witchfire power with a range of 18\". The affected model must roll 2D6+2 and subtract their Leadership. That model suffers a number of Wounds equal to the result. Armour and cover saves cannot be taken against Wounds caused by Trephination.",
+    "have_table": false
+  },
+  {
+    "title": "6 - MIND WIPE - Warp Charge............2",
+    "descr": "Mind Wipe is a malediction that targets a single enemy unit within 24\". All models in the target unit have their Weapon Skill and Ballistic Skill reduced to 1 until the end of their next turn, at which point the unit must take a Leadership test. If the Leadership test is failed, the effects of Mind Wipe last for the rest of the game.",
+    "have_table": false
+  }],
+  "tempestas" : [
+  {
+    "isPrimaris": true,
+    "title": "Living Lightning - Warp Charge............1",
+    "descr": "Living Lightning is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "18\"",
+    "table_s": "7",
+    "table_ap": "-",
+    "table_type": "Assault 3, Shock",
+    "post_desr": "Shock: For each To Hit roll of 6 made with Living Lightning, the target suffers an additional 2 hits, unless those To Hit rolls were Snap Shots."
+  },
+  {
+    "title": "1 - Storm Caller - Warp Charge............1",
+    "descr": "Storm Caller is a blessing that targets the Psyker and his unit. Whilst the power is in effect, the target unit has the Shrouded special rule.",
+    "have_table": false
+  },
+  {
+    "title": "2 - Tempest’s Wrath - Warp Charge............1",
+    "descr": "Tempest’s Wrath is a malediction that targets a single unit within 18\". Whilst the power is in effect, models in the target unit suffer a -1 penalty to their Ballistic Skill (to a minimum of 1) and treat all terrain, even open ground, as difficult terrain. In addition, unless they are Immobilised, all models in the target unit that have the Jump, Jet Pack, Jetbike, Flying Monstrous Creature, Flyer or Skimmer unit type must immediately take a Dangerous Test.",
+    "have_table": false
+  },
+  {
+    "title": "3 - Thunderclap - Warp Charge............1",
+    "descr": "Thunderclap is a nova power with the following profile:",
+    "have_table": true,
+    "table_range": "12\"",
+    "table_s": "3",
+    "table_ap": "-",
+    "table_type": "Assault 2D6"
+  },
+  {
+    "title": "4 - Murderous Hurricane - Warp Charge............2",
+    "descr": "Murderous Hurricane is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "18\"",
+    "table_s": "4",
+    "table_ap": "-",
+    "table_type": "Assault 1, Large Blast, Rending"
+  },
+  {
+    "title": "5 - Fury of the Wolf Spirits - Warp Charge............2",
+    "descr": "Fury of the Wolf Spirits is a witchfire power. Each time this power is manifested, the Psyker shoots using both of the profiles given below, one at a time, in any order. Both attacks must target the same unit.",
+    "have_table": true,
+    "table_row_title": "Fury of Freki",
+    "table_range": "18\"",
+    "table_s": "6",
+    "table_ap": "-",
+    "table_type": "Assault 4",
+    "have_second_table_row": true,
+    "table_row_title2": "Fury of Geri",
+    "table_range2": "18\"",
+    "table_s2": "5",
+    "table_ap2": "2",
+    "table_type2": "Assault 2, \nPrecision Shot"
+  },
+  {
+    "title": "6 - Jaws of the World Wolf - Warp Charge............2",
+    "descr": "Jaws of the World Wolf is a focussed witchfire power that targets a single non-vehicle unit within 18\". A model hit by Jaws of the World Wolf must take an Initiative test. Monstrous Creatures automatically pass this test. If the test is passed, nothing happens, but if the test is failed the model is removed from play.",
+    "have_table": false
+  }],
+  "runes of fate" : [
+  {
+    "isPrimaris": true,
+    "title": "GUIDE - Warp Charge............1",
+    "descr": "Guide is a blessing that targets a single friendly unit within 24\". Whilst the power is in effect, the target unit can re-roll all failed To Hit rolls when shooting.",
+    "have_table": false
+  },
+  {
+    "title": "1 - EXECUTIONER - Warp Charge............1",
+    "descr": "Executioner is a focussed witchfire power with a range of 24\". The target suffers 3 hits, resolved at the Farseer's Strength with the Fleshbane special rule, and AP-. If the target is removed from play as a result, another model in the same unit suffers 2 hits as described above. If the second target is slain, a third and final model in the same unit suffers 1 hit as described above.\nIf the Farseer chose the first target model, he can choose the second and third target models. If the first target model was chosen randomly, then the second and third target models must also be chosen randomly. If at any point a target survives, or there are no models left in the target's unit, the power's effects end.",
+    "have_table": false
+  },
+  {
+    "title": "2 - DOOM - Warp Charge............1",
+    "descr": "Doom is a malediction that targets a single enemy unit within 24\". If the target is a non-vehicle unit, all failed To Wound rolls made against the target can be re-rolled whilst this power is in effect. If the target is a vehicle, all failed Armour Penetration rolls made against it can be re-rolled whilst this power is in effect.",
+    "have_table": false
+  },
+  {
+    "title": "3 - ELDRITCH STORM - Warp Charge............2",
+    "descr": "Eldritch Storm is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "24\"",
+    "table_s": "3",
+    "table_ap": "-",
+    "table_type": "Assault 1, Haywire, Fleshbane, Large Blast, Pinning"
+  },
+  {
+    "title": "4 - DEATH MISSION - Warp Charge............2",
+    "descr": "Death Mission is a blessing power that targets the Farseer. Place D3+2 Death Mission counters next to your Farseer. Whilst there is at least one Death Mission counter next to the Farseer he gains the Fearless and Rampage special rules, and gains several bonuses to his characteristic profile as shown below (Note that his special rules and unit type are unaffected):\nDeath Mission bonus",
+    "have_table": false,
+    "have_spec_table": true,
+    "spec_table_headers":["WS", "BS", "S", "T", "W", "I", "A", "Ld", "Sv"],
+    "spec_table_data": ["+5", "-5", "-", "-", "-", "+5", "+2", "-", "-"],
+    "post_desr": "At the end of each phase, roll a D6. On a score of 1, 2 or 3, the Death Mission fades — remove one Death Mission counter from the Farseer. On a score of 4 or more, the Death Mission continues unabated — don't remove a counter. If, at any point, there are no Death Mission counters next to the Farseer or the game ends, the Death Mission ceases — the Farseer is removed from play as a casualty and awards Victory Points as normal for the mission being played. Whilst the Death Mission lasts, the Farseer cannot manifest other psychic powers. He can, however, manifest Death Mission again whilst it is still in effect —if he does so, add D3+2 Death Mission counters to him."
+  },
+  {
+    "title": "5 - FORTUNE - Warp Charge............2",
+    "descr": "Fortune is a blessing that targets a single friendly unit within 24\". Whilst the power is in effect, the target can re-roll all failed saving throws and Deny the Witch rolls.",
+    "have_table": false
+  },
+  {
+    "title": "6 - MIND WAR - Warp Charge............2",
+    "descr": "Mind War is a focussed witchfire power with a range of 24\". Both the Farseer and the target model roll a D6 and add their respective Leadership values:\n• If the target's score is higher, the Farseer manifesting this power has his Weapon Skill and Ballistic Skill reduced to 1 until the end of the following turn.• If the scores are drawn, the target model has its Weapon Skill and Ballistic Skill reduced to 1 until the end of the following turn.• If the Farseer's score is higher, the target suffers a number of Wounds equal to the difference between the two scores. In addition, the target has its Weapon Skill and Ballistic Skill reduced to 1 until the end of the following turn. No armour or cover saves are allowed against Wounds caused by Mind War.",
+    "have_table": false
+  }],
+  "runes of battle" : [
+  {
+    "isPrimaris": true,
+    "title": "CONCEAL/REVEAL - Warp Charge............1",
+    "descr": "Conceal is a blessing that targets the psyker. Whilst the power is in effect, the psyker has the Shrouded special rule. Reveal is a malediction that targets a single enemy unit within 18\". Whilst the power is in effect, all models in the target unit lose the Stealth and Shrouded special rules.",
+    "have_table": false
+  },
+  {
+    "title": "1 - DESTRUCTOR/RENEWER - Warp Charge............1",
+    "descr": "Destructor is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "Template",
+    "table_s": "5",
+    "table_ap": "4",
+    "table_type": "Assault 1, Soul Blaze"
+  },
+  {
+    "title": "2 - EMBOLDEN/HORRIFY - Warp Charge............1",
+    "descr": "Embolden is a blessing that targets the psyker. Whilst the power is in effect, the psyker and his unit have the Fearless special rule.\nHorrify is a malediction that targets a single enemy unit within 18\". All models in the target unit suffer a -3 modifier to Leadership.",
+    "have_table": false
+  },
+  {
+    "title": "3 - ENHANCE/DRAIN - Warp Charge............1",
+    "descr": "Enhance is a blessing that targets the psyker. Whilst the power is in effect, the psyker and his unit have +1 Weapon Skill and +1 Initiative.\nDrain is a malediction that targets a single enemy unit within 18\". Whilst the power is in effect, all models in the target unit have -1 Weapon Skill and -1 Initiative.",
+    "have_table": false
+  },
+  {
+    "title": "4 - PROTECT/JINX - Warp Charge............1",
+    "descr": "Protect is a blessing that targets the psyker. Whilst the power is in effect, the psyker and his unit have their Armour Saves improved by 1 (to a maximum of 2+).\nJinx is a malediction that targets a single enemy unit within 18\". Whilst the power is in effect, models in the target unit have their Armour Saves worsened by 1 (a model with a 6+ armour save would therefore have no Armour Save).",
+    "have_table": false
+  },
+  {
+    "title": "5 - QUICKEN/RESTRAIN - Warp Charge............1",
+    "descr": "Quicken is a blessing that targets the psyker. Whilst the power is in effect, the psyker and his unit Run an additional 3\" (this will normally be D6+3\").\nRestrain is a malediction that targets a single enemy unit within 18\". Whilst the power is in effect, models in the target unit cannot Run.",
+    "have_table": false
+  },
+  {
+    "title": "6 - EMPOWER/ENERVATE - Warp Charge............1",
+    "descr": "Empower is a blessing that targets the psyker. Whilst the power is in effect, the psyker and his unit have +1 Strength.\nEnervate is a malediction that targets a single enemy unit within 18\". Whilst the power is in effect, models in the target unit have -1 Strength.",
+    "have_table": false
+  }],
+  "tzeentch" : [
+  {
+    "isPrimaris": true,
+    "title": "TZEENTCH&#39;S FIRESTORM - Warp Charge............1",
+    "descr": "Tzeentch&#39;s Firestorm is a <strong>witchfire</strong> power with the following profile:",
+    "have_table": true,
+    "table_range": "24\"",
+    "table_s": "D6+1",
+    "table_ap": "-",
+    "table_type": "Assault 1, Blast, Inferno",
+    "post_desr": "Inferno: For each model that is removed as a casualty as a result of Tzeentch&#39;s Firestorm, the remainder of the unit immediately takes a further D3 Strength 3 AP- hits. These extra hits do not themselves generate more hits."
+  },
+  {
+    "title": "1-2 - BOON OF MUTATION - Warp Charge............1",
+    "descr": "Boon of Mutation is a blessing that targets a single, friendly character within 2&quot;. That character takes a Strength 4 AP-hit. If the character survives, he must immediately make a roll on the Chaos Boon table (re-rolling the Dark Apotheosis result)",
+    "have_table": false
+  },
+  {
+    "title": "3-4 - DOOMBOLT - Warp Charge............1",
+    "descr": "Doombolt is a beam with the following profile:",
+    "have_table": true,
+    "table_range": "18\"",
+    "table_s": "8",
+    "table_ap": "1",
+    "table_type": "Assault 1, Detonate",
+    "post_desr": "Detonate: If a Doombolt hits a vehicle and causes an Explodes! result, roll 2D6 to determine the explosion distance."
+  },
+  {
+    "title": "5-6 - BREATH OF CHAOS - Warp Charge............2",
+    "descr": "Breath of Chaos is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_row_title": "Fury of Freki",
+    "table_range": "Template",
+    "table_s": "1",
+    "table_ap": "2",
+    "table_type": "Assault 1, Corrosion, Poisoned (4+)",
+    "post_desr": "Corrosion: Do not roll for armour penetration against vehicles touched by the template. Instead they suffer a glancing hit on a D6 roll of a 4+."
+  }],
+  "nurgle" : [
+  {
+    "isPrimaris": true,
+    "title": "NURGLE'S ROT - Warp Charge............1",
+    "descr": "Nurgle's Rot is a nova power with the prolile below. Note that Daemons of Nurglc and models with the Mark of Nurgle are unaffected by Nurgle’s Rot- in fact, they find it rather refreshing!",
+    "have_table": true,
+    "table_range": "6\"",
+    "table_s": "2",
+    "table_ap": "5",
+    "table_type": "Assault D6+1, Poisoned (4+)"
+  },
+  {
+    "title": "1-2 - WEAPON VIRUS - Warp Charge............1",
+    "descr": "Weapon virus is a malediction that targets a single enemy unit within 24\" AII of the target unit's ranged weapons have the Gets Hot special rule whilst the power is in effect.",
+    "have_table": false
+  },
+  {
+    "title": "3-4 - GIFT OF CONTAGION - Warp Charge............1",
+    "descr": "Gift of Contagion is a malediction that affects a single enemy unit within 48\". Roll on the table below to see what effect it has on every model in the unit whilst the power is in effect.\nThe effects of multiple Gifts of Contagion are cumulative.\n- Flyblown Palsy: -1 Attack and the Shrouded special rule.\n- Muscular Atrophy: -1 Strength and may not Run.\n- Liquefying Ague: -1 Strength and -1 Toughness.",
+    "have_table": false
+  },
+  {
+    "title": "5-6 - PLAGUE WIND - Warp Charge............2",
+    "descr": "Plague Wind is a witchfire power with the profile below. It has no effect on vehicles.",
+    "have_table": true,
+    "table_range": "12\"",
+    "table_s": "1",
+    "table_ap": "2",
+    "table_type": "Assault 1, Large Blast, Poisoned (4+)"
+  }],
+  "plague" : [
+  {
+    "isPrimaris": true,
+    "title": "STREAM OF CORRUPTION - Warp Charge............1",
+    "descr": "Stream of Corruption is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "Template",
+    "table_s": "-",
+    "table_ap": "3",
+    "table_type": "Assault 1, Poisoned (4+)"
+  },
+  {
+    "title": "1-2 - PLAGUE WIND WARP - Warp Charge............1",
+    "descr": "Plague Wind is a witchfire power with the profile below. It has no effect on vehicles.",
+    "have_table": true,
+    "table_range": "12\"",
+    "table_s": "1",
+    "table_ap": "2",
+    "table_type": "Assault 1, Large Blast, Poisoned (4+)"
+  },
+  {
+    "title": "3-4 - MIASMA OF PESTILENCE - Warp Charge............1",
+    "descr": "Miasma of Pestilence is a blessing that targets the Psyker. At the start of each Fight sub-phase whilst this power is in effect, roll a D3. Until the end of the phase, all enemy units locked in close combat with the target, or his unit, suffer penalties to both Weapon Skill and Initiative equal to the result.",
+    "have_table": false
+  },
+  {
+    "title": "5-6 - RANCID VISITATIONS - Warp Charge............2",
+    "descr": "Rancid Visitations is a nova power with a range of 12\". Each target unit must pass a Toughness test or suffer a Wound with no armour or cover saves allowed.\nIf a model is slain, its unit must pass another Toughness test, or suffer an additional Wound with no armour or cover saves allowed. Repeat the process until a Toughness test is passed",
+    "have_table": false
+  }],
+  "change" : [
+  {
+    "isPrimaris": true,
+    "title": "FLICKERING FIRE OF TZEENTCH - Warp Charge............1-3",
+    "descr": "Flickering Fire of Tzeentch is a witchfire power with the profile given below. Flickering Fire of Tzeentch can be manifested using 1, 2 or 3 Warp Charge points - declare how many Warp Charge points will be used before attempting to manifest the power. Flickering Fire of Tzeentch fires an additional D6 shots for every Warp Charge point expended after the first.",
+    "have_table": true,
+    "table_range": "24\"",
+    "table_s": "5",
+    "table_ap": "4",
+    "table_type": "Assault 2D6, Soul Blaze, Warpflame",
+    "post_descr": "Warpflame: At the end of each phase. any unit that suffered one or more unsaved Wounds during the phase from an attack with this special rule (or from an attack made by a model with this special rule), must take a Toughness test. If the test is failed, the unit immediately suffers D3 Wounds with no armour or cover saves allowed, If the test is passed. all models in that unit gain the Feel No Pain (6+) special rule for the rest of the game. Any models in the unit that already have the Feel No Pain special rule instead gain +1 to all Feel No Pain rolls for the rest of the game. Chaos is fickle!"
+  },
+  {
+    "title": "1-2 - TZEENTCH'S FIRESTORM - Warp Charge............1",
+    "descr": "Tzeentch's Firestorm is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "24\"",
+    "table_s": "D6+1",
+    "table_ap": "-",
+    "table_type": "Assault 1, Blast, Warpflame"
+  },
+  {
+    "title": "3-4 - BOLT OF CHANGE - Warp Charge............1",
+    "descr": "Bolt of Change is a beam with the following profile:",
+    "have_table": true,
+    "table_range": "24\"",
+    "table_s": "D6+4",
+    "table_ap": "2",
+    "table_type": "Assault 1, Warpflame"
+  },
+  {
+    "title": "5-6 - INFERNAL GATEWAY - Warp Charge............2",
+    "descr": "Infernal Gateway is a witchfire power with the following profile:",
+    "have_table": true,
+    "table_range": "18\"",
+    "table_s": "D6+4",
+    "table_ap": "1",
+    "table_type": "Assault 1, Blast, Warpflame"
+  }]
+}

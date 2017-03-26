@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/root"
+        android:background="@drawable/rules_background3">
+    <ListView style="@style/root.ll_vertical.center_horizontal.rules_root"
+            android:id="@+id/activity_rules_buttons_list">
+    </ListView>
+</FrameLayout>

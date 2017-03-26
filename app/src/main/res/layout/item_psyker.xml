@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/root.ll_vertical">
+    <TextView style="@style/wide_element.psyker_name"
+            android:id="@+id/item_psyker_name"/>
+    <TextView style="@style/wide_element.psyker_mastery_lvl"
+            android:id="@+id/item_psyker_mastery_lvl"/>
+    <LinearLayout style="@style/item_psyker_powers"
+            android:id="@+id/item_psyker_powers"
+            android:divider="@drawable/powers_divider"
+            android:showDividers="middle">
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/root.ll_vertical"
+        android:id="@+id/root">
+    <TextView style="@style/wide_element"
+            android:id="@+id/item_power_title"
+            android:textStyle="bold"/>
+    <TextView style="@style/wide_element"
+            android:id="@+id/item_power_description"/>
+    <TableLayout style="@style/wide_element"
+            android:id="@+id/item_power_table"
+            android:divider="?android:attr/dividerHorizontal"
+            android:showDividers="middle"
+            android:shrinkColumns="3"
+            android:stretchColumns="*"
+            android:visibility="gone">
+        <TableRow>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:id="@+id/item_power_header_title"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="@string/_range"
+                    android:textStyle="bold"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="@string/_s"
+                    android:textStyle="bold"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="@string/_a_p"
+                    android:textStyle="bold"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="@string/_type"
+                    android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:id="@+id/item_power_row_title"
+                    android:visibility="gone"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:id="@+id/item_power_range"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:id="@+id/item_power_s"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:id="@+id/item_power_ap"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:id="@+id/item_power_type"/>
+        </TableRow>
+        <TableRow android:id="@+id/item_power_second_row"
+                android:visibility="gone">
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:id="@+id/item_power_row2_title"
+                    android:visibility="gone"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:id="@+id/item_power_range2"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:id="@+id/item_power_s2"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:id="@+id/item_power_ap2"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:id="@+id/item_power_type2"/>
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout style="@style/wide_element"
+            android:id="@+id/item_power_spec_table"
+            android:divider="?android:attr/dividerHorizontal"
+            android:showDividers="middle"
+            android:shrinkColumns="3"
+            android:stretchColumns="*"
+            android:visibility="gone">
+        <TableRow>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="WS"
+                    android:textStyle="bold"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="BS"
+                    android:textStyle="bold"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="S"
+                    android:textStyle="bold"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="T"
+                    android:textStyle="bold"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="W"
+                    android:textStyle="bold"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="I"
+                    android:textStyle="bold"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="A"
+                    android:textStyle="bold"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="Ld"
+                    android:textStyle="bold"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="Sv"
+                    android:textStyle="bold"/>
+        </TableRow>
+        <TableRow>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="+5"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="-5"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="-"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="-"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="-"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="+5"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="+2"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="-"/>
+            <TextView style="@style/wrap_content.psyker_power_cell"
+                    android:text="-"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

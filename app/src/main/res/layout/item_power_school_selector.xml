@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/wide_element"
+        android:orientation="horizontal">
+    <TextView style="@style/add_power_name"
+            android:id="@+id/power_school_name"/>
+    <Button style="@style/add_power_button"
+            android:id="@+id/add_power_decrease_button"
+            android:text="@string/minus"/>
+    <TextView style="@style/add_power_counter"
+            android:id="@+id/add_power_counter"
+            android:text="@string/_0"/>
+    <Button style="@style/add_power_button"
+            android:id="@+id/add_power_increase_button"
+            android:text="@string/plus"/>
+</LinearLayout>

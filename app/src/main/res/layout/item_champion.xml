@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/root.ll_vertical"
+        android:id="@+id/root"
+        android:background="@color/white_transparent">
+    <TextView style="@style/champion_name"
+            android:id="@+id/champion_name"/>
+    <LinearLayout style="@style/champion_rewards"
+            android:id="@+id/champion_rewards">
+    </LinearLayout>
+</LinearLayout>

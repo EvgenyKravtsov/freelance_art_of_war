@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/root.ll_vertical">
+    <TextView style="@style/score_selector_description"
+            android:id="@+id/score_selector_description"/>
+    <LinearLayout style="@style/score_selector_buttons_ll"
+            android:id="@+id/score_selector_buttons_ll">
+        <Button style="@style/score_selector_button"
+                android:id="@+id/score_selector_one_vp"
+                android:text="1 VP"/>
+        <Button style="@style/score_selector_button"
+                android:id="@+id/score_selector_d3"
+                android:text="D3"/>
+        <Button style="@style/score_selector_button"
+                android:id="@+id/score_selector_d3_plus_3"
+                android:text="D3+3"/>
+    </LinearLayout>
+</LinearLayout>

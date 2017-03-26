@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/root.ll_vertical"
+        android:background="@drawable/chaos_boons_background">
+
+        <RelativeLayout style="@style/chaos_boons_buttons_bar"
+                android:id="@+id/chaos_boons_buttons_bar"
+                android:background="@color/black">
+
+                <ImageView style="@style/chaos_boons_top_bar_button_cancel"
+                        android:id="@+id/chaos_boons_cancel_button"
+                        android:src="@drawable/cancel_all_button"/>
+
+                <ImageView
+                    android:id="@+id/question_mark"
+                    android:src="@drawable/quesmark_white"
+                    style="@style/chaos_boons_top_cancel"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+
+                <ImageView style="@style/chaos_boons_top_bar_button_add"
+                        android:id="@+id/chaos_boons_add"
+                        android:src="@drawable/add_button"/>
+        </RelativeLayout>
+        <ListView android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/chaos_boons_list">
+        </ListView>
+</LinearLayout>

@@ -1,0 +1,158 @@
+<resources>
+    <string name="app_name">Art Of War</string>
+    <string name="content_description">Art Of War</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="_rulebook">Rulebook</string>
+    <string name="_tau">Tau</string>
+    <string name="_tyranids">Tyranids</string>
+    <string name="_orks">Orks</string>
+    <string name="_eldar">Eldar</string>
+    <string name="_chaos__space__marines">Chaos Space Marines</string>
+    <string name="_chaos__daemons">Chaos Daemons</string>
+    <string name="_space__marine__forces">Space Marine Forces</string>
+    <string name="_imperial__forces">Imperial Forces</string>
+    <string name="_dark__eldar">Dark Eldar</string>
+    <string name="_necrons">Necrons</string>
+    <string name="_physics__power">Psychic Powers</string>
+    <string name="_melee__weapons">Melee Weapons</string>
+    <string name="_ranged__weapons">Ranged Weapons</string>
+    <string name="_grenades">Grenades</string>
+    <string name="_special__rules">Special Rules</string>
+    <string name="_tactical__objectives">Tactical Objectives</string>
+    <string name="_misterious__objectives">Mysterious Objectives</string>
+    <string name="_maelstorm_of__war__mission__table">Maelstrom of War Mission Table</string>
+    <string name="_eternal__war__mission__table">Eternal War Mission Table</string>
+    <string name="_warlord__traits">Warlord Traits</string>
+    <string name="_add_objective">Add random objective?</string>
+    <string name="_add_objective_description">Randomly add one to your objective list</string>
+    <string name="_ok">OK</string>
+    <string name="_clear">Clear</string>
+    <string name="_psychic_powers_randomizer">Psychic powers randomizer</string>
+    <string name="_chaos__boons_randomizer">Chaos Boons randomizer</string>
+    <string name="_tactical_objectives_randomizer">Tactical objectives randomizer</string>
+    <string name="_clear_your_objectives_list_">Clear your objectives list?</string>
+    <string name="_delete_all_your_champions_">Delete all your champions?</string>
+    <string name="_select_your_reward">Select your reward</string>
+    <string name="_score_">Score:</string>
+    <string name="_done_objectives">Done objectives</string>
+    <string name="_champion_name">Champion Name</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="_0">0</string>
+    <string name="_select_powers">Select powers</string>
+    <string name="_biomancy">Biomancy</string>
+    <string name="biomancy">biomancy</string>
+    <string name="_daemonology">Daemonology (Sanctic)</string>
+    <string name="daemonology">daemonology (sanctic)</string>
+    <string name="_divination">Divination</string>
+    <string name="divination">divination</string>
+    <string name="_malefic_powers">Malefic powers</string>
+    <string name="malefic_powers">malefic powers</string>
+    <string name="_pyromancy">Pyromancy</string>
+    <string name="pyromancy">pyromancy</string>
+    <string name="_telekinesis">Telekinesis</string>
+    <string name="telekinesis">telekinesis</string>
+    <string name="_telepathy">Telepathy</string>
+    <string name="telepathy">telepathy</string>
+    <string name="_enter_psyker_name">Enter psyker name</string>
+    <string name="_enter_mastery_lvl">Enter mastery level</string>
+    <string name="_range">Range</string>
+    <string name="_s">S</string>
+    <string name="_a_p">AP</string>
+    <string name="_type">Type</string>
+    <string name="_delete_selected_psyker">Delete selected psyker</string>
+    <string name="_delete_all_psykers">Delete all psykers</string>
+    <string name="_cancel">Cancel</string>
+    <string name="_delete">Delete</string>
+    <string name="_do_you_want_to_reroll_this_power_to_primaris_">Do you want to reroll this power to primaris?</string>
+    <string name="_select_powers_for_reroll">Select powers for reroll</string>
+    <string name="_manual">Manual</string>
+    <string name="_manual_text">To create a psyker, press “create psyker” button. If you want to create a non-special psyker (i.e. – sanctioned psykers from Imperium), choose a name, then select how many warp charges your psyker has and choose Psychic discipline.\n\n
+        Depending on the combinations of Psychic disciplines, Psychic powers will work as intended by rules of Warhammer 40k Rulebook.\n\n
+        If you choose 2 Psychic disciplines, your psyker won’t have a Primaris power from any of those disciplines. But you do have an ability to drop one of the Psychic powers and get a Primaris Power, like it is described in 7th Edition of Warhammer Rulebook.\n\n
+        To drop the Psychic Power, press on any of your Psychic Powers and you will be able to change it.\n\n
+        If you want to create a special psyker (i.e – Chief Librarian Tigurius), press “Add Special Psyker” button.\n\n
+        You will then need to select your psyker from the list. Each special psyker has unique abilities, which we did our best to display in this application. For example, Tigurius has the ability Master of Prescience – “When generating psychic powers, Tigurius may re-roll any roll of the dice to see which powers he knows.”\n\n
+        To choose a different Psychic power, simply press on any rolled Psychic power to change it. If one of your special Psykers always knows one of Psychic powers, it will be immediately shown in the list of known Psychic powers.</string>
+    <string name="_close">Close</string>
+    <string name="_select_psyker">Select Psyker</string>
+    <string name="_select__coteaze_power_source">Select Coteaze power source</string>
+    <string name="_known_powers">Known powers</string>
+    <string name="_generate_powers">Generate powers</string>
+    <string name="_mephiston__lord_of_death">Mephiston Lord of Death</string>
+    <string name="_change">Change</string>
+    <string name="_do_you_want_to_delete_this_objective_">Do you want to delete this objective?</string>
+    <string name="_create__psyker">Create Psyker</string>
+    <string name="_add__special__psyker">Add Special Psyker</string>
+    <string name="_psyker__class">Psyker Class</string>
+    <string name="_secondary_obj_1">Slay the\nWarlord</string>
+    <string name="_secondary_obj_2">First\nBlood</string>
+    <string name="_secondary_obj_3">Line\nbreaker</string>
+    <string name="_active">Active</string>
+    <string name="_rejected">Rejected</string>
+    <string name="_complete">Complete</string>
+    <!--<string name="_webData1">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsaGgOZCPsAd3nXsLfuJ0SzvjgVBrFPFZ0D4x/l8/BIQuVcn5S4zh/2r51BX5igIPvgez9hOYIp</string>-->
+    <!--<string name="_webData2">HztFZA+XE0hH/PyDSNG00NClbXEYmG/TTwE6Ci09u0/h8P9VKGaMGGtsnjG4jb1YeULSDQ7oMKQDZMx7wqQ6mbljppSuHMY8dWnplg2DdyZNx40tVCxlA1</string>-->
+    <!--<string name="_webData3">uRK9pDXJp4My5CQ/Q2+h006N60Bh6G8vN/w2DAC1k85ka7uAwzDXE17SQcaFRiowWavPojqJRq6yr0cEotJSOd2fejXK5wbdbZA42S6L3aZCNcG28LztLr</string>-->
+    <!--<string name="_webData4">nb2f6phIPzWj18+21xofqBvz68T4I4iwIDAQAB</string>-->
+   <string name="key_app">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgzuvOgfLg2XTMaw9PTiKE/eHhIUquFy1XvRMGwK5LqTRcr4+WXkInTYuuDbdN/ZM6g6ejQRzSV5LZdCDZbMZ4tjmEvaVFtm91dzFSQ7L/SrW3txkPlT5H9A2JqlFyeR3eoWPtLL7pCKXo7MsiqcrYWy5cw1T256UzKyqsS/ItSFVGyY4YrWEbIEKOUj+nYEsnqi9Pr13BeMpxrvCppI0mojot6C0CMyojX6RxN4PZeydhM9arJlyi5FjO0prnMzmjHfibcQUp2TlYjJFBzyvQXPWbP++19oBTZ+U1/nkF9FxvjGSsCTYb9+FbPnZApRjVPOeLsAMG7/S124vAOWqGQIDAQAB</string>
+
+    <!--<string name="key_app">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsaGgOZCPsAd3nXsLfuJ0SzvjgVBrFPFZ0D4x/l8/BIQuVcn5S4zh/2r51BX5igIPvgez9hOYIpHztFZA+XE0hH/PyDSNG00NClbXEYmG/TTwE6Ci09u0/h8P9VKGaMGGtsnjG4jb1YeULSDQ7oMKQDZMx7wqQ6mbljppSuHMY8dWnplg2DdyZNx40tVCxlA1uRK9pDXJp4My5CQ/Q2+h006N60Bh6G8vN/w2DAC1k85ka7uAwzDXE17SQcaFRiowWavPojqJRq6yr0cEotJSOd2fejXK5wbdbZA42S6L3aZCNcG28LztLrnb2f6phIPzWj18+21xofqBvz68T4I4iwIDAQAB</string>-->
+    <string name="_need_to_buy">Need to buy this</string>
+
+    <string-array name="rules_titles">
+        <item>Psychic Powers</item>
+        <item>Melee Weapons</item>
+        <item>Ranged Weapons</item>
+        <item>Grenades</item>
+        <item>Special Rules</item>
+        <item>Tactical Objectives</item>
+        <item>Mysterious Objectives</item>
+        <item>Maelstrom of War Mission Table</item>
+        <item>Eternal War Mission Table</item>
+        <item>Warlord Traits</item>
+    </string-array>
+
+    <string-array name="chaos_boons_rewards">
+        <item>11 Unworthy Offering: The champion receives no reward. Better luck next time!</item>
+        <item>12 Unworthy Offering: The champion receives no reward. Better luck next time!</item>
+        <item>13 Unworthy Offering: The champion receives no reward. Better luck next time!</item>
+        <item>14 Unworthy Offering: The champion receives no reward. Better luck next time!</item>
+        <item>15 Unworthy Offering: The champion receives no reward. Better luck next time!</item>
+        <item>16 Unworthy Offering: The champion receives no reward. Better luck next time!</item>
+        <item>21 Spawnhood: The champion is transformed into a Chaos Spawn. Place a spare Chaos Spawn model, on full Wounds, within 3" of the champion (or the vehicle in which he is embarked) and more than 1" from enemy models. Then, remove the champion model from play. If the Chaos Spawn cannot be placed, just remove the champion. The champion only counts as killed once this Chaos Spawn is removed as a casualty, or if it cannot be placed on the board. The champion is now a separate, unengaged, non-scoring unit that retains none of the champion’s special rules or wargear. It does, however, retain the same mark of Chaos (if it had one). If the champion was your Warlord, this Chaos  Spawn  remains your Warlord but loses his Warlord Trait.</item>
+        <item>22 Spawnhood: The champion is transformed into a Chaos Spawn. Place a spare Chaos Spawn model, on full Wounds, within 3" of the champion (or the vehicle in which he is embarked) and more than 1" from enemy models. Then, remove the champion model from play. If the Chaos Spawn cannot be placed, just remove the champion. The champion only counts as killed once this Chaos Spawn is removed as a casualty, or if it cannot be placed on the board. The champion is now a separate, unengaged, non-scoring unit that retains none of the champion’s special rules or wargear. It does, however, retain the same mark of Chaos (if it had one). If the champion was your Warlord, this Chaos  Spawn  remains your Warlord but loses his Warlord Trait.</item>
+        <item>23 Warp Frenzy: The champion has +1 Attack.</item>
+        <item>24 Fragment of lmmortality: The champion has the Eternal Warrior special rule.</item>
+        <item>25 Strength of the Berzerker: The champion has +1 Strength.</item>
+        <item>26 Arcane Occulum: The champion has +1 Ballistic Skill.</item>
+        <item>31 Cerebral Cogitator: The champion has +1 Initiative</item>
+        <item>32 Bloated: The champion is returned to full Wounds. lf he is already  at full Wounds, he now has +I Wound.</item>
+        <item>33 Crystalline Body: The champion has +1 Toughness.</item>
+        <item>34 Shield of Force: The champion has the Shrouded special rule.</item>
+        <item>35 Mechanoid: The champion\'s  Armour  Save improves by 1.</item>
+        <item>36 Blade of Chaos: If he has one, choose one of the champion\'s Melee Weapons - it now has the Fleshbane special rule.</item>
+        <item>41 Witch-eater: When the champion or his unit pass a Deny the Witch roll, the  enemy  Psyker  immediately takes a S6, AP2 hit.</item>
+        <item>42 Cosmic Fate: The champion may re-roll failed armour saves.</item>
+        <item>43 Venomous: The champion\'s Melee attacks have the Poisoned special rule.</item>
+        <item>44 Unholy Crusader: The champion has the Crusader special rule.</item>
+        <item>45 Meteoric Charge: The champion has the Hammer of Wrath special rule.</item>
+        <item>46 Icy Aura: Enemy models in base contact with the champion at the end of Initiative Step 1 take a S4, AP5 hit.</item>
+        <item>51 Mind of Metal: The champion has the Adamantium Will special rule.</item>
+        <item>52 Gun Morph: If he has one, choose one of the champion\'s ranged Weapons - it now has +1 Strength (this applies to both weapons on a combi-weapon).</item>
+        <item>53 All-consuming Hatred: The champion has the Hatred special rule.</item>
+        <item>54 Warp Claws: The champion has the Shred special rule.</item>
+        <item>55 Lifetaker: The champion\'s Melee attacks have the Instant Death special rule.</item>
+        <item>56 Blademaster: The champion has +1 Weapon Skill.</item>
+        <item>61 Voice of Horus: The champion has the Stubborn special rule.</item>
+        <item>62 Temporal Distortion: The champion has the Fleet special rule.</item>
+        <item>63 Masochism: The champion has the Feel No Pain special rule.</item>
+        <item>64 Multiple Boons: Roll another D3+1 times on this table, re-rolling Spawnhood and Dark Apotheosis results.</item>
+        <item>65 Dark Apotheosis: The champion is transformed into a Daemon Prince equipped with power armour. This follows the rules for Spawnhood (see result 21&#8211;22) with the following exceptions:\n&#9679; In every instance, replace the words "Chaos Spawn" with "Daemon Prince".\n&#9679; If the champion had a Mark of Chaos, the Daemon Prince is instead a Daemon of the same Chaos god.\n&#9679; If the champion was your Warlord, he retains his Warlord Trait.</item>
+        <item>66 Dark Apotheosis: The champion is transformed into a Daemon Prince equipped with power armour. This follows the rules for Spawnhood (see result 21&#8211;22) with the following exceptions:\n&#9679; In every instance, replace the words "Chaos Spawn" with "Daemon Prince".\n&#9679; If the champion had a Mark of Chaos, the Daemon Prince is instead a Daemon of the same Chaos god.\n&#9679; If the champion was your Warlord, he retains his Warlord Trait.</item>
+    </string-array>
+
+    <string name="subscribe_message">Randomizer allows you to generate psychic powers, chaos boons and tactical objectives with ease!</string>
+</resources>

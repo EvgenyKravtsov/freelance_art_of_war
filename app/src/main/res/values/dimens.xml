@@ -1,0 +1,28 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="margin">4dp</dimen>
+    <dimen name="quad_margin">16dp</dimen>
+    <dimen name="padding">4dp</dimen>
+    <dimen name="quad_padding">16dp</dimen>
+    <dimen name="item_height">48dp</dimen>
+    <dimen name="main_menu_side_margin">24dp</dimen>
+    <dimen name="main_menu_search_field_margin">48dp</dimen>
+    <dimen name="main_menu_bottom_margin">88dp</dimen>
+    <dimen name="main_menu_button_height">48dp</dimen>
+    <dimen name="main_menu_search_field_top_padding">88dp</dimen>
+    <dimen name="section_button_height">48dp</dimen>
+
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+    <dimen name="text_size_extra_large">24sp</dimen>
+    <dimen name="rules_submenu_text_size">20sp</dimen>
+    <dimen name="armory_button_text_size">@dimen/text_size_extra_large</dimen>
+    <dimen name="armory_submenu_button_text_size">@dimen/text_size_extra_large</dimen>
+    <dimen name="randomizer_menu_button_text_size">26sp</dimen>
+
+    <dimen name="randomizer_button_height">48dp</dimen>
+    <dimen name="randomizer_top_bar_margins">4dp</dimen>
+    <dimen name="secondary_objectives_button_height">96dp</dimen>
+</resources>

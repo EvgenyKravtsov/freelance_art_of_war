@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="46f6fc91b2514028e31cc97e638802529a276c31">
+        <dex dex="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_15e405dcdae2cb8386fe6eeace0933c0f14a7aaf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jack\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.0.0_1384414adeea3e222c0d88a32d7dac72f343cc1c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jack\.android\build-cache\849b8ab74cf0ed351f9d72477ef9df1af0320153\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_42ef72899ccf276bfc136139e786b04b51182874\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jack\.android\build-cache\e6c960074c8bc29e5e12061ac117324efeae88c0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a3b065fa25f145ed4f3984b8cacdd6a6e8a076d7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_781cf77a5329fae24bf23dbf8d22bd31f8a84ad1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\libs\commons-io-2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\build\intermediates\transforms\dex\debug\folders\1000\2\commons-io-2.4_20b667c8f3483f280b720d8edf3d5a75e5ced3e5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jack\.android\build-cache\849b8ab74cf0ed351f9d72477ef9df1af0320153\output\jars\libs\internal_impl-22.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.0.0_5467e6e2b67d8f324fa623d4734e1c52e5c3c00f\classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,59 @@
+{"tigurius" : {
+  "name": "Tigurius",
+  "masteryLvl": "3",
+  "generate_from": ["biomancy", "divination", "pyromancy", "telekinesis", "telepathy", "malefic powers", "daemonology (sanctic)"],
+  "single_reroll": true
+},"coteaz" : {
+  "name": "Coteaz",
+  "masteryLvl": "2",
+  "known_powers": ["hammerhand", "sanctuary", "dark excommunication"],
+  "generate_from": ["biomancy", "divination", "pyromancy", "telekinesis", "telepathy", "malefic powers", "daemonology (sanctic)"],
+  "choose_sourse": true
+},"mephiston_lord_of_death": {
+    "name": "Mephiston Lord of Death",
+    "masteryLvl": "3",
+    "known_powers": ["sanguine_sword"],
+    "generate_from": ["sanguinary", "biomancy", "daemonology (sanctic)", "divination", "pyromancy", "telepathy", "malefic powers"]
+}, "stern" : {
+  "name": "Stern",
+  "masteryLvl": "2",
+  "generate_from": ["daemonology (sanctic)"]
+},"castellan_crowe" : {
+  "name": "Castellan Crowe",
+  "masteryLvl": "2",
+  "generate_from": ["daemonology (sanctic)"]
+}, "kaldor_draigo" : {
+  "name": "Kaldor Draigo",
+  "masteryLvl": "2",
+  "generate_from": ["daemonology (sanctic)"]
+}, "ezekiel" : {
+  "name": "Ezekiel",
+  "masteryLvl": "3",
+  "generate_from": ["divination", "pyromancy", "telepathy", "telekinesis",  "daemonology (sanctic)", "interromancy", "malefic powers"]
+}, "njal_stormcaller" : {
+  "name": "Njal Stormcaller",
+  "masteryLvl": "3",
+  "generate_from": ["biomancy", "daemonology (sanctic)", "divination", "telekinesis", "tempestas", "malefic powers"]
+}, "eldrad_ulthran": {
+  "name": "Eldrad Ulthran",
+  "masteryLvl": "4",
+  "generate_from": ["daemonology (sanctic)", "divination", "runes of fate", "runes of battle", "telepathy", "malefic powers"]
+}, "ahriman": {
+  "name": "Ahriman",
+  "masteryLvl": "4",
+  "generate_from": ["biomancy", "pyromancy", "telepathy", "tzeentch", "malefic powers", "daemonology (sanctic)"]
+}, "typhus": {
+  "name": "Typhus",
+  "masteryLvl": "2",
+  "generate_from": ["nurgle", "malefic powers", "daemonology (sanctic)"]
+}, "ku_gath_plaguefather" : {
+  "name": "Ku’Gath Plaguefather",
+  "masteryLvl": "1",
+  "generate_from": ["plague", "malefic powers", "daemonology (sanctic)"]
+}, "kairos_fateweaver": {
+  "name": "Kairos Fateweaver",
+  "masteryLvl": "4",
+  "known_schools": ["change"],
+  "generate_from": ["Biomancy", "Divination", "Pyromancy", "Telepathy", "Malefic Powers", "Daemonology (Sanctic)"]
+}
+}
