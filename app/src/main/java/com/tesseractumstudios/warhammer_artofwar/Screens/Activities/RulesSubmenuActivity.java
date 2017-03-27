@@ -1,12 +1,24 @@
 package com.tesseractumstudios.warhammer_artofwar.Screens.Activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
+
+import com.tesseractumstudios.warhammer_artofwar.util.Converter;
+import com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular;
 
 import art.of.war.tesseractumstudios.R;
 
@@ -19,6 +31,8 @@ public class RulesSubmenuActivity extends ActionBarActivity {
     private String[]                itemsArray;
     private String                  path;
 
+    private TextViewRobotoRegular screenTitle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +41,9 @@ public class RulesSubmenuActivity extends ActionBarActivity {
         findViews();
 
         path = getIntent().getStringExtra("path");
+        String[] pathDivided = path.split("/");
+        screenTitle.setText(pathDivided[pathDivided.length - 1]);
+
         try {
             filesListArray  = getAssets().list(path);
             itemsArray      = prepareItemsArray(filesListArray);
@@ -34,7 +51,7 @@ public class RulesSubmenuActivity extends ActionBarActivity {
             e.printStackTrace();
         }
 
-        adapter = new ArrayAdapter<>(this, R.layout.item_rules_button_list, itemsArray);
+        adapter = new RulesSubmenuArrayAdapter(this, R.layout.item_rules_button_list, itemsArray);
 
         buttonslist.setFooterDividersEnabled(false);
         buttonslist.setAdapter(adapter);
@@ -59,6 +76,17 @@ public class RulesSubmenuActivity extends ActionBarActivity {
 
     private void findViews() {
         buttonslist = (ListView) findViewById(R.id.activity_rules_buttons_list);
+
+        screenTitle = (TextViewRobotoRegular) findViewById(R.id.rulesSubmenuActivity_title);
+
+
+        ImageView backButton = (ImageView) findViewById(R.id.rulesSubmenuActivity_backImage);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RulesSubmenuActivity.this.finish();
+            }
+        });
     }
 
     private String[] prepareItemsArray(String[] fileList) {
@@ -99,5 +127,46 @@ public class RulesSubmenuActivity extends ActionBarActivity {
             }
         }
         return String.valueOf(chars);
+    }
+
+    ////
+
+    class RulesSubmenuArrayAdapter extends ArrayAdapter {
+
+        private String[] itemsArray;
+
+        ////
+
+        RulesSubmenuArrayAdapter(Context context, int textResourceId, String[] itemsArray) {
+            super(context, textResourceId, itemsArray);
+            this.itemsArray = itemsArray;
+        }
+
+        ////
+
+        @NonNull
+        @Override
+        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+            View view = convertView;
+
+            if (view == null) {
+                LayoutInflater layoutInflater = (LayoutInflater)
+                        getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                view = layoutInflater.inflate(R.layout.item_rules_button_list, null);
+            }
+
+            String itemTitle = itemsArray[position];
+
+            if (itemTitle != null) {
+                TextViewRobotoRegular itemTitleTextView = (TextViewRobotoRegular)
+                        view.findViewById(R.id.item_rules_button_text);
+                itemTitleTextView.setText(itemTitle);
+
+                view.setLayoutParams(new RelativeLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT, Converter.dpTpPx(getContext(), 80)));
+            }
+
+            return view;
+        }
     }
 }

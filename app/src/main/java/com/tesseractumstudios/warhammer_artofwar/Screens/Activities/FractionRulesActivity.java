@@ -6,11 +6,12 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import art.of.war.tesseractumstudios.R;
 
 public class FractionRulesActivity extends ActionBarActivity {
-    private Button spaceMarineForces, imperialForces, chaosSpaceMarines, chaosDaemons, eldar,
+    private RelativeLayout spaceMarineForces, imperialForces, chaosSpaceMarines, chaosDaemons, eldar,
             darkEldar, orks, necrons, tau, tyranids;
 
     @Override
@@ -19,36 +20,20 @@ public class FractionRulesActivity extends ActionBarActivity {
         setContentView(R.layout.activity_fraction_rules);
 
         findViews();
-        adjustFonts();
         setListeners();
     }
 
     private void findViews() {
-        spaceMarineForces   = (Button) findViewById(R.id.fraction_rules_space_marine_forces);
-        imperialForces      = (Button) findViewById(R.id.fraction_rules_imperial_forces);
-        chaosSpaceMarines   = (Button) findViewById(R.id.fraction_rules_chaos_space_marines);
-        chaosDaemons        = (Button) findViewById(R.id.fraction_rules_chaos_daemons);
-        eldar               = (Button) findViewById(R.id.fraction_rules_eldar);
-        darkEldar           = (Button) findViewById(R.id.fraction_rules_dark_eldar);
-        orks                = (Button) findViewById(R.id.fraction_rules_orks);
-        necrons             = (Button) findViewById(R.id.fraction_rules_necrons);
-        tau                 = (Button) findViewById(R.id.fraction_rules_tau);
-        tyranids            = (Button) findViewById(R.id.fraction_rules_tyranids);
-    }
-
-    private void adjustFonts() {
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/HERETICA INQUISITOR.TTF");
-
-        spaceMarineForces.setTypeface(typeface);
-        imperialForces.setTypeface(typeface);
-        chaosSpaceMarines.setTypeface(typeface);
-        chaosDaemons.setTypeface(typeface);
-        eldar.setTypeface(typeface);
-        darkEldar.setTypeface(typeface);
-        orks.setTypeface(typeface);
-        necrons.setTypeface(typeface);
-        tau.setTypeface(typeface);
-        tyranids.setTypeface(typeface);
+        spaceMarineForces   = (RelativeLayout) findViewById(R.id.fraction_rules_space_marine_forces);
+        imperialForces      = (RelativeLayout) findViewById(R.id.fraction_rules_imperial_forces);
+        chaosSpaceMarines   = (RelativeLayout) findViewById(R.id.fraction_rules_chaos_space_marines);
+        chaosDaemons        = (RelativeLayout) findViewById(R.id.fraction_rules_chaos_daemons);
+        eldar               = (RelativeLayout) findViewById(R.id.fraction_rules_eldar);
+        darkEldar           = (RelativeLayout) findViewById(R.id.fraction_rules_dark_eldar);
+        orks                = (RelativeLayout) findViewById(R.id.fraction_rules_orks);
+        necrons             = (RelativeLayout) findViewById(R.id.fraction_rules_necrons);
+        tau                 = (RelativeLayout) findViewById(R.id.fraction_rules_tau);
+        tyranids            = (RelativeLayout) findViewById(R.id.fraction_rules_tyranids);
     }
 
     private void setListeners() {

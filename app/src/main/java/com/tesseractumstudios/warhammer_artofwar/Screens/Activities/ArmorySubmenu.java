@@ -7,8 +7,14 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+
+import com.tesseractumstudios.warhammer_artofwar.util.Converter;
+import com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular;
 
 import art.of.war.tesseractumstudios.R;
 
@@ -30,9 +36,6 @@ public class ArmorySubmenu extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_armory_submenu);
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(),
-                                    "fonts/Copperplate Gothic Bold Regular.ttf");
-
         path = getIntent().getStringExtra("path");
         parentFolder = prepareParentPrefix(path);
         try {
@@ -43,17 +46,37 @@ public class ArmorySubmenu extends ActionBarActivity {
         }
         buttonsList = (LinearLayout) findViewById(R.id.armory_submenu_buttons_list);
 
+        // Set Title
+        TextViewRobotoRegular title = (TextViewRobotoRegular)
+                findViewById(R.id.armorySubmenuActivity_title);
+        String[] pathDivided = path.split("/");
+        title.setText(pathDivided[pathDivided.length - 1]);
+
+        // Set Back Button
+        ImageView backButton = (ImageView) findViewById(R.id.armorySubmenuActivity_backImage);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArmorySubmenu.this.finish();
+            }
+        });
+
         for ( String name : fileNames ) {
-            final Button submenuButton = (Button) LayoutInflater.from(this)
+            final RelativeLayout submenuButton = (RelativeLayout) LayoutInflater.from(this)
                                     .inflate(R.layout.armory_submenu_button, null);
 
-            submenuButton.setTypeface(typeface);
-            submenuButton.setText(capitalizeString(cutFilePrefixAndSuffix(name)));
+            final TextViewRobotoRegular submenuButtonTitle = (TextViewRobotoRegular)
+                    submenuButton.findViewById(R.id.armorySubmenuButton_buttonTitle);
+
+            submenuButton.setLayoutParams(new RelativeLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT, Converter.dpTpPx(this, 80)));
+
+            submenuButtonTitle.setText(capitalizeString(cutFilePrefixAndSuffix(name)));
             submenuButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent;
-                    String fileName = getFullFileName((String) submenuButton.getText());
+                    String fileName = getFullFileName((String) submenuButtonTitle.getText());
 
                     if (!isFile(fileName)) {
                         intent = new Intent(ArmorySubmenu.this, ArmorySubmenu.class);

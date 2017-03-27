@@ -1,47 +1,496 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/root"
+    android:id="@+id/rules_root"
+    android:background="@android:color/black">
+
+    <!-- BACKGROUND IMAGE -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/general_background"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/content_description" />
+
+    <!-- TITLE GROUP -->
+    <RelativeLayout
+        android:id="@+id/inner_titleGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginEnd="48dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true">
+
+            <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                android:id="@+id/armorySubmenuButton_buttonTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:text="Fraction Rules"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+        <!-- BACK BUTTON -->
+        <ImageView
+            android:id="@+id/armoryActivity_backImage"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/list_arrow_left_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/content_description" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/inner_titleGroup"
+        android:layout_marginTop="32dp"
+        android:background="@color/white" />
+
+    <!-- BUTTONS -->
+    <ScrollView
         style="@style/root"
-        android:background="@drawable/fraction_rules_main_bg">
-    <LinearLayout style="@style/root.ll_vertical.center_horizontal.section_root">
-        <Button style="@style/section_button"
+        android:layout_below="@+id/inner_titleGroup"
+        android:layout_marginTop="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/fraction_rules_space_marine_forces"
-                android:text="@string/_space__marine__forces"
-                android:drawableRight="@drawable/armory_space_marine_forces_icon"/>
-        <Button style="@style/section_button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                tools:background="@color/black">
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/_space__marine__forces"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/list_arrow_right_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="48dp"
+                    android:layout_marginEnd="48dp"
+                    android:contentDescription="@string/content_description" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/fraction_rules_imperial_forces"
-                android:text="@string/_imperial__forces"
-                android:drawableRight="@drawable/armory_imperial_forces_icon"/>
-        <Button style="@style/section_button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                tools:background="@color/black">
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/_imperial__forces"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/list_arrow_right_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="48dp"
+                    android:layout_marginEnd="48dp"
+                    android:contentDescription="@string/content_description" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/fraction_rules_chaos_space_marines"
-                android:text="@string/_chaos__space__marines"
-                android:drawableRight="@drawable/armory_chaos_space_marines_icon"/>
-        <Button style="@style/section_button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                tools:background="@color/black">
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/_chaos__space__marines"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/list_arrow_right_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="48dp"
+                    android:layout_marginEnd="48dp"
+                    android:contentDescription="@string/content_description" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/fraction_rules_chaos_daemons"
-                android:text="@string/_chaos__daemons"
-                android:drawableRight="@drawable/armory_chaos_daemons_icon"/>
-        <Button style="@style/section_button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                tools:background="@color/black">
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/_chaos__daemons"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/list_arrow_right_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="48dp"
+                    android:layout_marginEnd="48dp"
+                    android:contentDescription="@string/content_description" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/fraction_rules_eldar"
-                android:text="@string/_eldar"
-                android:drawableRight="@drawable/armory_eldar_icon"/>
-        <Button style="@style/section_button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                tools:background="@color/black">
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/_eldar"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/list_arrow_right_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="48dp"
+                    android:layout_marginEnd="48dp"
+                    android:contentDescription="@string/content_description" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/fraction_rules_dark_eldar"
-                android:text="@string/_dark__eldar"
-                android:drawableRight="@drawable/armory_dark_eldar_icon"/>
-        <Button style="@style/section_button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                tools:background="@color/black">
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/_dark__eldar"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/list_arrow_right_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="48dp"
+                    android:layout_marginEnd="48dp"
+                    android:contentDescription="@string/content_description" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/fraction_rules_orks"
-                android:text="@string/_orks"
-                android:drawableRight="@drawable/armory_orks_icon"/>
-        <Button style="@style/section_button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                tools:background="@color/black">
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/_orks"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/list_arrow_right_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="48dp"
+                    android:layout_marginEnd="48dp"
+                    android:contentDescription="@string/content_description" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/fraction_rules_necrons"
-                android:text="@string/_necrons"
-                android:drawableRight="@drawable/armory_necron_icon"/>
-        <Button style="@style/section_button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                tools:background="@color/black">
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/_necrons"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/list_arrow_right_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="48dp"
+                    android:layout_marginEnd="48dp"
+                    android:contentDescription="@string/content_description" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/fraction_rules_tau"
-                android:text="@string/_tau"
-                android:drawableRight="@drawable/armory_tau_icon"/>
-        <Button style="@style/section_button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                tools:background="@color/black">
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/_tau"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/list_arrow_right_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="48dp"
+                    android:layout_marginEnd="48dp"
+                    android:contentDescription="@string/content_description" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/fraction_rules_tyranids"
-                android:text="@string/_tyranids"
-                android:drawableRight="@drawable/armory_tyranids_icon"/>
-    </LinearLayout>
-</ScrollView>
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                tools:background="@color/black">
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/_tyranids"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/list_arrow_right_icon"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="48dp"
+                    android:layout_marginEnd="48dp"
+                    android:contentDescription="@string/content_description" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/white"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

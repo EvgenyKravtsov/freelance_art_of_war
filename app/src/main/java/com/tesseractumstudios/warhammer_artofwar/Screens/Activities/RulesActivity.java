@@ -6,9 +6,15 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+
+import com.tesseractumstudios.warhammer_artofwar.util.Converter;
+import com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular;
 
 import art.of.war.tesseractumstudios.R;
 
@@ -27,8 +33,7 @@ public class RulesActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules);
-
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/HERETICA INQUISITOR.TTF");
+        initBackButton();
 
         path = getIntent().getStringExtra("path");
 
@@ -40,16 +45,18 @@ public class RulesActivity extends ActionBarActivity {
         buttonsList = (LinearLayout) findViewById(R.id.rules_buttons_list);
 
         for ( String name : fileNames ) {
-            final Button submenuButton = (Button) LayoutInflater.from(this)
+            final RelativeLayout submenuButton = (RelativeLayout) LayoutInflater.from(this)
                     .inflate(R.layout.armory_submenu_button, null);
 
-            submenuButton.setTypeface(typeface);
-            submenuButton.setText(capitalizeString(cutFileExtension(name)));
+            final TextViewRobotoRegular submenuButtonTitle = (TextViewRobotoRegular)
+                    submenuButton.findViewById(R.id.armorySubmenuButton_buttonTitle);
+
+            submenuButtonTitle.setText(capitalizeString(cutFileExtension(name)));
             submenuButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent;
-                    String fileName = getFullFileName((String) submenuButton.getText());
+                    String fileName = getFullFileName((String) submenuButtonTitle.getText());
 
                     if ( !isFile(fileName) ) {
                         intent = new Intent(RulesActivity.this, RulesSubmenuActivity.class);
@@ -58,9 +65,13 @@ public class RulesActivity extends ActionBarActivity {
                         intent = new Intent(RulesActivity.this, Viewer.class);
                         intent.putExtra("path", "android_asset/" + path + "/" + fileName);
                     }
+
                     startActivity(intent);
                 }
             });
+
+            submenuButton.setLayoutParams(new RelativeLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT, Converter.dpTpPx(this, 80)));
 
             buttonsList.addView(submenuButton);
         }
@@ -105,5 +116,16 @@ public class RulesActivity extends ActionBarActivity {
             }
         }
         return String.valueOf(chars);
+    }
+
+    private void initBackButton() {
+        ImageView backButton = (ImageView) findViewById(R.id.rulesActivity_backImage);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RulesActivity.this.finish();
+            }
+        });
     }
 }

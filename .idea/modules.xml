@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Warhammer_ArtOfWar.iml" filepath="$PROJECT_DIR$/Warhammer_ArtOfWar.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/freelance_art_of_war.iml" filepath="$PROJECT_DIR$/freelance_art_of_war.iml" />
     </modules>
   </component>
 </project>
