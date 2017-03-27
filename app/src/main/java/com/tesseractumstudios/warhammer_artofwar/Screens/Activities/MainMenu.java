@@ -44,7 +44,8 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
     private static final int    WIDE_SCREEN_MARGIN      = 500;
 
     private ImageView   backGround;
-    private ImageButton randomizerButton, rulesButton, fractionRulesButton,
+    private ImageView searchFieldPlaceholderImage;
+    private TextView randomizerButton, rulesButton, fractionRulesButton,
                                 armoryButton, chartsAndTablesButton;
     private EditText    searchField;
 
@@ -77,10 +78,7 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
         String              base64Data      = getString(R.string.key_app);
 
         findViews();
-        if ( screenDpWidth < WIDE_SCREEN_MARGIN ) {
-            adjustViews();
-            backGround.setImageBitmap(adjustBackground(metrics.widthPixels));
-        }
+
         setListeners();
 
         if ( !preferences.getBoolean(IS_INSTALLED_KEY, false) ) {
@@ -145,6 +143,12 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
 //                }
 //            }
 //        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        searchField.clearFocus();
     }
 
     @Override
@@ -237,43 +241,6 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
         while((read = in.read(buffer)) != -1){
             out.write(buffer, 0, read);
         }
-    }
-
-    private void adjustViews() {
-        randomizerButton.setImageBitmap(rescaleBitmap(BitmapFactory.decodeResource(getResources(),
-                R.drawable.randomizer_port)));
-        rulesButton.setImageBitmap(rescaleBitmap(BitmapFactory.decodeResource(getResources(),
-                R.drawable.rules_port)));
-        fractionRulesButton.setImageBitmap(rescaleBitmap(BitmapFactory.decodeResource(getResources(),
-                R.drawable.fractionrules_port)));
-        armoryButton.setImageBitmap(rescaleBitmap(BitmapFactory.decodeResource(getResources(),
-                R.drawable.armory_port)));
-        chartsAndTablesButton.setImageBitmap(rescaleBitmap(BitmapFactory.decodeResource(getResources(),
-                R.drawable.chart_tables_port)));
-    }
-
-    private Bitmap rescaleBitmap(Bitmap origin) {
-        DisplayMetrics  metrics         = getResources().getDisplayMetrics();
-        float           screenDpWidth   = metrics.widthPixels / metrics.density;
-        float           buttonDpWidth   = screenDpWidth - BUTTONS_MARGIN;
-        float           orgWidth        = origin.getWidth();
-        float           orgHeight       = origin.getHeight();
-        float           newWidth        = buttonDpWidth * metrics.density;
-        float           newHeight       = newWidth * orgHeight / orgWidth;
-        Bitmap          newBitmap       = Bitmap.createScaledBitmap(
-                                                origin, (int) newWidth, (int) newHeight, false);
-
-        return newBitmap;
-    }
-
-    private Bitmap adjustBackground(float screenWidth) {
-        Bitmap  origin          = BitmapFactory.decodeResource(getResources(),
-                                        R.drawable.menu_background);
-        float   newHeight       = screenWidth * origin.getHeight() / origin.getWidth();
-        Bitmap  rescaledImage   = Bitmap.createScaledBitmap(origin, (int) screenWidth,
-                                        (int) newHeight, false );
-
-        return rescaledImage;
     }
 
     private void setListeners() {
@@ -375,26 +342,32 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
                 return true;
             }
         });
+
+        searchField.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    searchFieldPlaceholderImage.setVisibility(View.GONE);
+                }
+                else {
+                    if (searchField.getText().toString().length() == 0)
+                        searchFieldPlaceholderImage.setVisibility(View.VISIBLE);
+                }
+            }
+        });
     }
 
     private void findViews() {
-        randomizerButton        = (ImageButton) findViewById(R.id.main_menu_randomizer_button);
-        rulesButton             = (ImageButton) findViewById(R.id.main_menu_rules_button);
-        fractionRulesButton     = (ImageButton) findViewById(R.id.main_menu_fraction_rules_button);
-        armoryButton            = (ImageButton) findViewById(R.id.main_menu_armory_button);
-        chartsAndTablesButton   = (ImageButton) findViewById(R.id.main_menu_chart_tables_button);
+        randomizerButton        = (TextView) findViewById(R.id.main_menu_randomizer_button);
+        rulesButton             = (TextView) findViewById(R.id.main_menu_rules_button);
+        fractionRulesButton     = (TextView) findViewById(R.id.main_menu_fraction_rules_button);
+        armoryButton            = (TextView) findViewById(R.id.main_menu_armory_button);
+        chartsAndTablesButton   = (TextView) findViewById(R.id.main_menu_chart_tables_button);
         searchField             = (EditText) findViewById(R.id.main_menu_search_field);
         backGround              = (ImageView) findViewById(R.id.bg);
-    }
 
-    private void showToast(String text) {
-        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
-    }
-
-    public static void Alert(final Activity ct) {
-
-
-
+        searchFieldPlaceholderImage = (ImageView)
+                findViewById(R.id.mainActivity_searchFieldPlaceholderImage);
     }
 
     public static void refreshActivity(Activity ct){

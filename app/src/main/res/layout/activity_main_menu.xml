@@ -1,8 +1,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/general_background">
+    android:background="@android:color/black">
 
+    <!-- BACKGROUND IMAGE -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/general_background"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/content_description" />
+
+    <!-- LOGO -->
     <ImageView
         android:id="@+id/inner_logo"
         android:layout_width="match_parent"
@@ -11,6 +21,14 @@
         android:src="@drawable/general_background_logo"
         android:contentDescription="@string/content_description" />
 
+    <!-- DUMMY TO PREVENT AUTO FOCUS -->
+    <View
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px" />
+
+    <!-- SEARCH FIELD -->
     <FrameLayout
         android:layout_width="280dp"
         android:layout_height="40dp"
@@ -19,6 +37,7 @@
         android:layout_centerHorizontal="true">
 
         <ImageView
+            android:id="@+id/mainActivity_searchFieldPlaceholderImage"
             android:layout_width="96dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
@@ -26,13 +45,18 @@
             android:contentDescription="@string/content_description" />
 
         <EditText
+            android:id="@+id/main_menu_search_field"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:background="@drawable/search_field_contour"
-            android:inputType="text" />
+            android:inputType="text"
+            android:textCursorDrawable="@null"
+            android:textColor="@android:color/white" />
 
     </FrameLayout>
 
+    <!-- BUTTONS -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -40,7 +64,8 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="16dp">
 
-        <TextView
+        <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+            android:id="@+id/main_menu_randomizer_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
@@ -55,20 +80,26 @@
             android:orientation="horizontal"
             android:layout_marginBottom="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                android:id="@+id/main_menu_rules_button"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:text="RANDOMIZER"
-                android:drawableTop="@drawable/randomizer_icon"
+                android:text="RULES"
+                android:drawableTop="@drawable/rules_icon"
                 android:layout_marginBottom="8dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                android:id="@+id/main_menu_armory_button"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
                 android:textColor="@android:color/white"
-                android:text="RANDOMIZER"
-                android:drawableTop="@drawable/randomizer_icon" />
+                android:text="ARMORY"
+                android:drawableTop="@drawable/armory_icon" />
 
         </LinearLayout>
 
@@ -77,106 +108,29 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <LinearLayout
+            <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                android:id="@+id/main_menu_fraction_rules_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
                 android:gravity="center_horizontal"
-                android:layout_gravity="center_horizontal">
+                android:textColor="@android:color/white"
+                android:text="FRACTION RULES"
+                android:drawableTop="@drawable/fraction_rules_icon"
+                android:layout_marginBottom="8dp" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/randomizer_icon"
-                    android:contentDescription="@string/content_description" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="RANDOMIZER"
-                    android:textColor="@android:color/white" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                android:id="@+id/main_menu_chart_tables_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
                 android:gravity="center_horizontal"
-                android:layout_gravity="center_horizontal">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/randomizer_icon"
-                    android:contentDescription="@string/content_description" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="RANDOMIZER"
-                    android:textColor="@android:color/white" />
-
-            </LinearLayout>
+                android:textColor="@android:color/white"
+                android:text="CHARTS &amp; TABLES"
+                android:drawableTop="@drawable/charts_tables_icon" />
 
         </LinearLayout>
 
     </LinearLayout>
 
 </RelativeLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        style="@style/root"
-        tools:context=".MainMenu"
-        android:background="@color/black">
-
-    <RelativeLayout android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-        <ImageView style="@style/main_menu_background"
-                android:id="@+id/bg"
-                android:src="@drawable/menu_background"/>
-
-        <FrameLayout style="@style/main_menu_search_layout">
-            <EditText style="@style/main_menu_search_field"
-                    android:id="@+id/main_menu_search_field"/>
-        </FrameLayout>
-
-        <LinearLayout style="@style/main_menu_ll_buttons"
-                android:id="@+id/ll">
-            <ImageButton style="@style/main_menu_button"
-                    android:id="@+id/main_menu_randomizer_button"
-                    android:src="@drawable/randomizer_port"/>
-            <ImageButton style="@style/main_menu_button"
-                    android:id="@+id/main_menu_rules_button"
-                    android:src="@drawable/rules_port"/>
-            <ImageButton style="@style/main_menu_button"
-                    android:id="@+id/main_menu_fraction_rules_button"
-                    android:src="@drawable/fractionrules_port"/>
-            <ImageButton style="@style/main_menu_button"
-                    android:id="@+id/main_menu_armory_button"
-                    android:src="@drawable/armory_port"/>
-            <ImageButton style="@style/main_menu_button"
-                    android:id="@+id/main_menu_chart_tables_button"
-                    android:src="@drawable/chart_tables_port"/>
-        </LinearLayout>
-
-    </RelativeLayout>
-
-</ScrollView> -->
