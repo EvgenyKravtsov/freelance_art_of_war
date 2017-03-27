@@ -50,7 +50,7 @@
 
         <!-- BACK BUTTON -->
         <ImageView
-            android:id="@+id/armoryActivity_backImage"
+            android:id="@+id/fractionRulesActivity_backImage"
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:src="@drawable/list_arrow_left_icon"

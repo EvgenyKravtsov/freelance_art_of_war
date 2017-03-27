@@ -6,8 +6,15 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+
+import com.tesseractumstudios.warhammer_artofwar.util.Converter;
+import com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular;
 
 import art.of.war.tesseractumstudios.R;
 
@@ -27,9 +34,17 @@ public class ChartsAndTablesActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_charts_and_tables);
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/HERETICA INQUISITOR.TTF");
-
         path = getIntent().getStringExtra("path");
+
+        // Set Back Button
+        ImageView backButton = (ImageView) findViewById(R.id.chartsTablesActivity_backImage);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ChartsAndTablesActivity.this.finish();
+            }
+        });
+
         try {
             fileNames = getAssets().list(path);
         } catch (IOException e) {
@@ -38,16 +53,21 @@ public class ChartsAndTablesActivity extends ActionBarActivity {
         buttonsList = (LinearLayout) findViewById(R.id.chart_and_tables_buttons_list);
 
         for ( String name : fileNames ) {
-            final Button submenuButton = (Button) LayoutInflater.from(this)
-                    .inflate(R.layout.armory_submenu_button, null);
+            final FrameLayout submenuButton = (FrameLayout) LayoutInflater.from(this)
+                    .inflate(R.layout.armory_submenu_button_2, null);
 
-            submenuButton.setTypeface(typeface);
-            submenuButton.setText(capitalizeString(cutFileExtension(name)));
+            final TextViewRobotoRegular submenuButtonTitle = (TextViewRobotoRegular)
+                    submenuButton.findViewById(R.id.armorySubmenuButton2_buttonTitle);
+
+            submenuButton.setLayoutParams(new RelativeLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT, Converter.dpTpPx(this, 64)));
+
+            submenuButtonTitle.setText(capitalizeString(cutFileExtension(name)));
             submenuButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent;
-                    String fileName = getFullFileName((String) submenuButton.getText());
+                    String fileName = getFullFileName((String) submenuButtonTitle.getText());
 
                     if ( !isFile(fileName) ) {
                         intent = new Intent(ChartsAndTablesActivity.this, RulesSubmenuActivity.class);

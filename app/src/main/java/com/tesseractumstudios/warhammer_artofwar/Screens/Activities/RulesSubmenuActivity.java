@@ -152,18 +152,18 @@ public class RulesSubmenuActivity extends ActionBarActivity {
             if (view == null) {
                 LayoutInflater layoutInflater = (LayoutInflater)
                         getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                view = layoutInflater.inflate(R.layout.item_rules_button_list, null);
+                view = layoutInflater.inflate(R.layout.item_rules_button_list_2, null);
             }
 
             String itemTitle = itemsArray[position];
 
             if (itemTitle != null) {
                 TextViewRobotoRegular itemTitleTextView = (TextViewRobotoRegular)
-                        view.findViewById(R.id.item_rules_button_text);
+                        view.findViewById(R.id.itemRulesButtonList2_buttonTitle);
                 itemTitleTextView.setText(itemTitle);
 
                 view.setLayoutParams(new RelativeLayout.LayoutParams(
-                        ViewGroup.LayoutParams.MATCH_PARENT, Converter.dpTpPx(getContext(), 80)));
+                        ViewGroup.LayoutParams.MATCH_PARENT, Converter.dpTpPx(getContext(), 64)));
             }
 
             return view;

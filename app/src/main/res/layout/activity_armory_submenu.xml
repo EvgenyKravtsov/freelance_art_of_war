@@ -62,26 +62,19 @@
 
 </RelativeLayout>
 
-<View
-    android:layout_width="match_parent"
-    android:layout_height="0.5dp"
-    android:layout_below="@+id/inner_titleGroup"
-    android:layout_marginTop="32dp"
-    android:background="@color/white" />
-
-<!-- LIST -->
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/inner_titleGroup"
-    android:layout_marginTop="32dp">
-
-    <LinearLayout
-        android:id="@+id/armory_submenu_buttons_list"
+    <!-- LIST -->
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" />
+        android:layout_below="@+id/inner_titleGroup"
+        android:layout_marginTop="32dp">
 
-</ScrollView>
+        <LinearLayout
+            android:id="@+id/armory_submenu_buttons_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
 
 </RelativeLayout>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import art.of.war.tesseractumstudios.R;
@@ -21,6 +22,15 @@ public class FractionRulesActivity extends ActionBarActivity {
 
         findViews();
         setListeners();
+
+        // Set Back Button
+        ImageView backButton = (ImageView) findViewById(R.id.fractionRulesActivity_backImage);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FractionRulesActivity.this.finish();
+            }
+        });
     }
 
     private void findViews() {

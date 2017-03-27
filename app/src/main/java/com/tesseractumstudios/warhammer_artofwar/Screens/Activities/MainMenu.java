@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,7 +46,7 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
 
     private ImageView   backGround;
     private ImageView searchFieldPlaceholderImage;
-    private TextView randomizerButton, rulesButton, fractionRulesButton,
+    private LinearLayout randomizerButton, rulesButton, fractionRulesButton,
                                 armoryButton, chartsAndTablesButton;
     private EditText    searchField;
 
@@ -358,11 +359,11 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
     }
 
     private void findViews() {
-        randomizerButton        = (TextView) findViewById(R.id.main_menu_randomizer_button);
-        rulesButton             = (TextView) findViewById(R.id.main_menu_rules_button);
-        fractionRulesButton     = (TextView) findViewById(R.id.main_menu_fraction_rules_button);
-        armoryButton            = (TextView) findViewById(R.id.main_menu_armory_button);
-        chartsAndTablesButton   = (TextView) findViewById(R.id.main_menu_chart_tables_button);
+        randomizerButton        = (LinearLayout) findViewById(R.id.main_menu_randomizer_button);
+        rulesButton             = (LinearLayout) findViewById(R.id.main_menu_rules_button);
+        fractionRulesButton     = (LinearLayout) findViewById(R.id.main_menu_fraction_rules_button);
+        armoryButton            = (LinearLayout) findViewById(R.id.main_menu_armory_button);
+        chartsAndTablesButton   = (LinearLayout) findViewById(R.id.main_menu_chart_tables_button);
         searchField             = (EditText) findViewById(R.id.main_menu_search_field);
         backGround              = (ImageView) findViewById(R.id.bg);
 

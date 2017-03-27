@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -62,14 +63,14 @@ public class ArmorySubmenu extends ActionBarActivity {
         });
 
         for ( String name : fileNames ) {
-            final RelativeLayout submenuButton = (RelativeLayout) LayoutInflater.from(this)
-                                    .inflate(R.layout.armory_submenu_button, null);
+            final FrameLayout submenuButton = (FrameLayout) LayoutInflater.from(this)
+                                    .inflate(R.layout.armory_submenu_button_2, null);
 
             final TextViewRobotoRegular submenuButtonTitle = (TextViewRobotoRegular)
-                    submenuButton.findViewById(R.id.armorySubmenuButton_buttonTitle);
+                    submenuButton.findViewById(R.id.armorySubmenuButton2_buttonTitle);
 
             submenuButton.setLayoutParams(new RelativeLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT, Converter.dpTpPx(this, 80)));
+                    ViewGroup.LayoutParams.MATCH_PARENT, Converter.dpTpPx(this, 56)));
 
             submenuButtonTitle.setText(capitalizeString(cutFilePrefixAndSuffix(name)));
             submenuButton.setOnClickListener(new View.OnClickListener() {
