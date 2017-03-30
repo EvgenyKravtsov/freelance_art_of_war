@@ -1,11 +1,12 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/black">
 
     <!-- BACKGROUND IMAGE -->
     <ImageView
+        android:id="@+id/mainMenuActivity_backgroundImageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/general_background"
@@ -30,6 +31,7 @@
 
     <!-- SEARCH FIELD -->
     <FrameLayout
+        android:id="@+id/inner_searchGroup"
         android:layout_width="280dp"
         android:layout_height="40dp"
         android:layout_below="@+id/inner_logo"
@@ -55,6 +57,14 @@
             android:textColor="@android:color/white" />
 
     </FrameLayout>
+
+    <Button
+        android:id="@+id/mainMenuActivity_systemMenuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inner_searchGroup"
+        android:layout_centerHorizontal="true"
+        android:text="System Menu" />
 
     <!-- BUTTONS -->
     <LinearLayout

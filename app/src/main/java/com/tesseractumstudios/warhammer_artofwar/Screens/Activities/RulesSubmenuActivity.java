@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import com.tesseractumstudios.warhammer_artofwar.systemmenu.SettingsStorage;
 import com.tesseractumstudios.warhammer_artofwar.util.Converter;
 import com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular;
 
@@ -32,6 +33,8 @@ public class RulesSubmenuActivity extends ActionBarActivity {
     private String                  path;
 
     private TextViewRobotoRegular screenTitle;
+
+    private ImageView backgroundImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +75,15 @@ public class RulesSubmenuActivity extends ActionBarActivity {
                 startActivity(intent);
             }
         });
+
+        backgroundImageView = (ImageView) findViewById(R.id.rulesSubmenuActivity_backgroundImageView);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        backgroundImageView.setImageDrawable(getResources().getDrawable(
+                new SettingsStorage(this).getPreferredSkinResourceId()));
     }
 
     private void findViews() {

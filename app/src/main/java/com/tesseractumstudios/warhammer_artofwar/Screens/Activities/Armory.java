@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.tesseractumstudios.warhammer_artofwar.systemmenu.SettingsStorage;
 import com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular;
 
 import art.of.war.tesseractumstudios.R;
@@ -16,6 +17,7 @@ import art.of.war.tesseractumstudios.R;
 public class Armory extends ActionBarActivity {
     private RelativeLayout spaceMarineForces, imperialForces, chaosSpaceMarines, chaosDaemons, eldar,
                             darkEldar, orks, necrons, tau, tyranids, rulebook;
+    private ImageView backgroundImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,13 @@ public class Armory extends ActionBarActivity {
 
         findViews();
         setListeners();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        backgroundImageView.setImageDrawable(getResources().getDrawable(
+                new SettingsStorage(this).getPreferredSkinResourceId()));
     }
 
     private void findViews() {
@@ -47,6 +56,8 @@ public class Armory extends ActionBarActivity {
                 Armory.this.finish();
             }
         });
+
+        backgroundImageView = (ImageView) findViewById(R.id.armoryActivity_backgroundImageView);
     }
 
     private void setListeners() {

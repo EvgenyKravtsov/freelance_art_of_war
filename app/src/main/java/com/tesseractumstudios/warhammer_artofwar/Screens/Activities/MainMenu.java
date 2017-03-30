@@ -17,6 +17,7 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -25,6 +26,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import art.of.war.tesseractumstudios.R;
+
+import com.tesseractumstudios.warhammer_artofwar.systemmenu.SettingsStorage;
+import com.tesseractumstudios.warhammer_artofwar.systemmenu.SystemMenuActivity;
 import com.tesseractumstudios.warhammer_artofwar.util.IabBroadcastReceiver;
 import com.tesseractumstudios.warhammer_artofwar.util.IabHelper;
 import com.tesseractumstudios.warhammer_artofwar.util.IabResult;
@@ -49,6 +53,8 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
     private LinearLayout randomizerButton, rulesButton, fractionRulesButton,
                                 armoryButton, chartsAndTablesButton;
     private EditText    searchField;
+    private Button systemMenuButton;
+    private ImageView backgroundImageView;
 
     private IabHelper                                   iabHelper;
     private IabBroadcastReceiver                        iabBroadcastReceiver;
@@ -68,7 +74,7 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
 
 
         TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-        deviceId= telephonyManager.getDeviceId();
+        //deviceId= telephonyManager.getDeviceId();
 
         DisplayMetrics      metrics         = getResources().getDisplayMetrics();
         float               screenDpWidth   = metrics.widthPixels / metrics.density;
@@ -150,6 +156,8 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
     protected void onResume() {
         super.onResume();
         searchField.clearFocus();
+        backgroundImageView.setImageDrawable(getResources().getDrawable(
+                new SettingsStorage(this).getPreferredSkinResourceId()));
     }
 
     @Override
@@ -356,6 +364,14 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
                 }
             }
         });
+
+        systemMenuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent navigateToSystemMenuIntent = new Intent(MainMenu.this, SystemMenuActivity.class);
+                startActivity(navigateToSystemMenuIntent);
+            }
+        });
     }
 
     private void findViews() {
@@ -365,10 +381,14 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
         armoryButton            = (LinearLayout) findViewById(R.id.main_menu_armory_button);
         chartsAndTablesButton   = (LinearLayout) findViewById(R.id.main_menu_chart_tables_button);
         searchField             = (EditText) findViewById(R.id.main_menu_search_field);
-        backGround              = (ImageView) findViewById(R.id.bg);
+        //backGround              = (ImageView) findViewById(R.id.bg);
 
         searchFieldPlaceholderImage = (ImageView)
                 findViewById(R.id.mainActivity_searchFieldPlaceholderImage);
+
+        systemMenuButton = (Button) findViewById(R.id.mainMenuActivity_systemMenuButton);
+
+        backgroundImageView = (ImageView) findViewById(R.id.mainMenuActivity_backgroundImageView);
     }
 
     public static void refreshActivity(Activity ct){

@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.tesseractumstudios.warhammer_artofwar.systemmenu.SettingsStorage;
 import com.tesseractumstudios.warhammer_artofwar.util.Converter;
 import com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular;
 
@@ -31,6 +32,8 @@ public class ArmorySubmenu extends ActionBarActivity {
     private String[] fileNames;
     private ArrayList<String> fileNamesArray;
     private LinearLayout buttonsList;
+
+    private ImageView backgroundImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +95,15 @@ public class ArmorySubmenu extends ActionBarActivity {
 
             buttonsList.addView(submenuButton);
         }
+
+        backgroundImageView = (ImageView) findViewById(R.id.armorySubmenuActivity_backgroundImageView);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        backgroundImageView.setImageDrawable(getResources().getDrawable(
+                new SettingsStorage(this).getPreferredSkinResourceId()));
     }
 
     private String cutFilePrefixAndSuffix(String fullFileName) {

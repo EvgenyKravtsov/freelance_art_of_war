@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.tesseractumstudios.warhammer_artofwar.systemmenu.SettingsStorage;
 import com.tesseractumstudios.warhammer_artofwar.util.Converter;
 import com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular;
 
@@ -28,6 +29,8 @@ public class ChartsAndTablesActivity extends ActionBarActivity {
     private String path;
     private String[] fileNames;
     private LinearLayout buttonsList;
+
+    private ImageView backgroundImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +85,15 @@ public class ChartsAndTablesActivity extends ActionBarActivity {
 
             buttonsList.addView(submenuButton);
         }
+
+        backgroundImageView = (ImageView) findViewById(R.id.chartsAndTablesActivity_backgroundImageView);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        backgroundImageView.setImageDrawable(getResources().getDrawable(
+                new SettingsStorage(this).getPreferredSkinResourceId()));
     }
 
     private String cutFileExtension(String fullFileName) {

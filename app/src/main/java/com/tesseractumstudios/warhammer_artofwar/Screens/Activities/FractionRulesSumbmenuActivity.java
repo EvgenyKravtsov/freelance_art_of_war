@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.tesseractumstudios.warhammer_artofwar.systemmenu.SettingsStorage;
 import com.tesseractumstudios.warhammer_artofwar.util.Converter;
 import com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular;
 
@@ -31,6 +32,8 @@ public class FractionRulesSumbmenuActivity extends ActionBarActivity {
     private ArrayList<String> fileNamesArray;
     private LinearLayout buttonsList;
     private FrameLayout rootViewGroup;
+
+    private ImageView backgroundImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +98,8 @@ public class FractionRulesSumbmenuActivity extends ActionBarActivity {
             buttonsList.addView(submenuButton);
         }
 
+        backgroundImageView = (ImageView) findViewById(R.id.fractionRulesSubmenuActivity_backgroundImageView);
+
 //        Button chaosArtifactsSubmenuButton = (Button) LayoutInflater.from(this)
 //                .inflate(R.layout.armory_submenu_button, null);
 //        chaosArtifactsSubmenuButton.setTypeface(typeface);
@@ -106,6 +111,13 @@ public class FractionRulesSumbmenuActivity extends ActionBarActivity {
 //            }
 //        });
 //        buttonsList.addView(chaosArtifactsSubmenuButton);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        backgroundImageView.setImageDrawable(getResources().getDrawable(
+                new SettingsStorage(this).getPreferredSkinResourceId()));
     }
 
     private int getBackgroundId(String path) {

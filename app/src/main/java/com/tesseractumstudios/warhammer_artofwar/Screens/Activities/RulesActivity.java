@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.tesseractumstudios.warhammer_artofwar.systemmenu.SettingsStorage;
 import com.tesseractumstudios.warhammer_artofwar.util.Converter;
 import com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular;
 
@@ -24,6 +25,8 @@ import java.util.Arrays;
 
 public class RulesActivity extends ActionBarActivity {
     private static final String TAG = "FractionRulesSumbmenu";
+
+    private ImageView backgroundImageView;
 
     private String path;
     private String[] fileNames;
@@ -74,7 +77,16 @@ public class RulesActivity extends ActionBarActivity {
                     ViewGroup.LayoutParams.MATCH_PARENT, Converter.dpTpPx(this, 80)));
 
             buttonsList.addView(submenuButton);
+
+            backgroundImageView = (ImageView) findViewById(R.id.rulesActivity_backgroundImageView);
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        backgroundImageView.setImageDrawable(getResources().getDrawable(
+                new SettingsStorage(this).getPreferredSkinResourceId()));
     }
 
     private String cutFileExtension(String fullFileName) {

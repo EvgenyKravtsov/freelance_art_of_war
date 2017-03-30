@@ -9,11 +9,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.tesseractumstudios.warhammer_artofwar.systemmenu.SettingsStorage;
+
 import art.of.war.tesseractumstudios.R;
 
 public class FractionRulesActivity extends ActionBarActivity {
     private RelativeLayout spaceMarineForces, imperialForces, chaosSpaceMarines, chaosDaemons, eldar,
             darkEldar, orks, necrons, tau, tyranids;
+    private ImageView backgroundImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,13 @@ public class FractionRulesActivity extends ActionBarActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        backgroundImageView.setImageDrawable(getResources().getDrawable(
+                new SettingsStorage(this).getPreferredSkinResourceId()));
+    }
+
     private void findViews() {
         spaceMarineForces   = (RelativeLayout) findViewById(R.id.fraction_rules_space_marine_forces);
         imperialForces      = (RelativeLayout) findViewById(R.id.fraction_rules_imperial_forces);
@@ -44,6 +54,8 @@ public class FractionRulesActivity extends ActionBarActivity {
         necrons             = (RelativeLayout) findViewById(R.id.fraction_rules_necrons);
         tau                 = (RelativeLayout) findViewById(R.id.fraction_rules_tau);
         tyranids            = (RelativeLayout) findViewById(R.id.fraction_rules_tyranids);
+
+        backgroundImageView = (ImageView) findViewById(R.id.fractionRulesActivity_backgroundImageView);
     }
 
     private void setListeners() {

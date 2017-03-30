@@ -1,3 +1,231 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- BACKGROUND IMAGE -->
+    <ImageView
+        android:id="@+id/mainMenuActivity_backgroundImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/general_background"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/content_description" />
+
+    <!-- LOGO -->
+    <ImageView
+        android:id="@+id/inner_logo"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/general_background_logo"
+        android:contentDescription="@string/content_description" />
+
+    <!-- DUMMY TO PREVENT AUTO FOCUS -->
+    <View
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px" />
+
+    <!-- SEARCH FIELD -->
+    <FrameLayout
+        android:id="@+id/inner_searchGroup"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/inner_logo"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/mainActivity_searchFieldPlaceholderImage"
+            android:layout_width="96dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/search_field_placeholder"
+            android:contentDescription="@string/content_description" />
+
+        <EditText
+            android:id="@+id/main_menu_search_field"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/search_field_contour"
+            android:inputType="text"
+            android:textCursorDrawable="@null"
+            android:textColor="@android:color/white" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/mainMenuActivity_systemMenuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inner_searchGroup"
+        android:layout_centerHorizontal="true"
+        android:text="System Menu" />
+
+    <!-- BUTTONS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp">
+
+        <!-- RANDOMIZER -->
+        <LinearLayout
+            android:id="@+id/main_menu_randomizer_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:background="@drawable/randomizer_icon"
+                android:contentDescription="@string/content_description"/>
+
+            <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="RANDOMIZER" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <!-- RULES -->
+            <LinearLayout
+                android:id="@+id/main_menu_rules_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:background="@drawable/rules_icon"
+                    android:contentDescription="@string/content_description"/>
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="RULES" />
+
+            </LinearLayout>
+
+            <!-- ARMORY -->
+            <LinearLayout
+                android:id="@+id/main_menu_armory_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:background="@drawable/armory_icon"
+                    android:contentDescription="@string/content_description"/>
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="ARMORY" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- FRACTION RULES -->
+            <LinearLayout
+                android:id="@+id/main_menu_fraction_rules_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:background="@drawable/fraction_rules_icon"
+                    android:contentDescription="@string/content_description"/>
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="FRACTION RULES" />
+
+            </LinearLayout>
+
+            <!-- CHARTS AND TABLES -->
+            <LinearLayout
+                android:id="@+id/main_menu_chart_tables_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:background="@drawable/charts_tables_icon"
+                    android:contentDescription="@string/content_description"/>
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="CHARTS AND TABLES" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         style="@style/root"
@@ -51,4 +279,4 @@
         <Space style="@style/main_menu_wide_vertical_space"
                 android:layout_weight="166"/>
     </LinearLayout>
-</FrameLayout>
+</FrameLayout> -->

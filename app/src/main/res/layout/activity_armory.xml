@@ -6,6 +6,7 @@
 
     <!-- BACKGROUND IMAGE -->
     <ImageView
+        android:id="@+id/armoryActivity_backgroundImageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/general_background"
