@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.tesseractumstudios.warhammer_artofwar.Screens.Activities.MainMenu;
 import com.tesseractumstudios.warhammer_artofwar.systemmenu.SettingsStorage;
 
 import art.of.war.tesseractumstudios.R;
@@ -54,7 +55,8 @@ public final class ChangeSkinFragment extends Fragment implements ChangeSkinCont
     @Override
     public void dismiss() {
         getActivity().getFragmentManager().beginTransaction().remove(this).commit();
-        getActivity().recreate();
+        ((MainMenu) getActivity()).backgroundImageView.setImageDrawable(getResources().getDrawable(
+                new SettingsStorage(getActivity()).getPreferredSkinResourceId()));
     }
 
     //// CONTROL CALLBACKS

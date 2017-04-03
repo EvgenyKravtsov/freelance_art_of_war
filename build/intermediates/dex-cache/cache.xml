@@ -21,6 +21,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Jack\.android\build-cache\08d02ada28743308e57b2c77a325a1b99617c285\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6f3c6b417a7e14c60c207f8ec4ce5e8eebd59907\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
@@ -52,8 +61,26 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="3b83d79598b2154404fc5d3c23c9c42da80ef80f">
+        sha1="831137498ce6db8475c8ebbd19b9fd9b8afe46db">
         <dex dex="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_15e405dcdae2cb8386fe6eeace0933c0f14a7aaf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jack\.android\build-cache\dacb1a485c9c15c50035d742b68aadc3f92d3514\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f0f0ddda8862117f01562ef059114631b56603b0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jack\.android\build-cache\01f19c95f000a3ec00dc16cb0dcfaa96853b6fc0\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\Jack\Desktop\freelance\Warhammer_ArtOfWar\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d337b54fe25787e53fd765521220f21b5cc98670\classes.dex" />
     </item>
     <item
         is-multidex="true"

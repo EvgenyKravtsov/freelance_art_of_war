@@ -2,6 +2,8 @@ package com.tesseractumstudios.warhammer_artofwar.Screens.Activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,10 +13,13 @@ import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.telephony.TelephonyManager;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -22,18 +27,20 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import art.of.war.tesseractumstudios.R;
 
 import com.tesseractumstudios.warhammer_artofwar.systemmenu.SettingsStorage;
-import com.tesseractumstudios.warhammer_artofwar.systemmenu.SystemMenuActivity;
+import com.tesseractumstudios.warhammer_artofwar.systemmenu.changeskin.ChangeSkinFragment;
 import com.tesseractumstudios.warhammer_artofwar.util.IabBroadcastReceiver;
 import com.tesseractumstudios.warhammer_artofwar.util.IabHelper;
 import com.tesseractumstudios.warhammer_artofwar.util.IabResult;
 import com.tesseractumstudios.warhammer_artofwar.util.Inventory;
 import com.tesseractumstudios.warhammer_artofwar.util.Purchase;
+import com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -48,13 +55,14 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
     private static final int    BUTTONS_MARGIN          = 48;
     private static final int    WIDE_SCREEN_MARGIN      = 500;
 
+    private DrawerLayout navigationDrawer;
+
     private ImageView   backGround;
     private ImageView searchFieldPlaceholderImage;
     private LinearLayout randomizerButton, rulesButton, fractionRulesButton,
                                 armoryButton, chartsAndTablesButton;
     private EditText    searchField;
-    private Button systemMenuButton;
-    private ImageView backgroundImageView;
+    public ImageView backgroundImageView;
 
     private IabHelper                                   iabHelper;
     private IabBroadcastReceiver                        iabBroadcastReceiver;
@@ -71,7 +79,7 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-
+        initSystemMenu();
 
         TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
         //deviceId= telephonyManager.getDeviceId();
@@ -364,14 +372,6 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
                 }
             }
         });
-
-        systemMenuButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent navigateToSystemMenuIntent = new Intent(MainMenu.this, SystemMenuActivity.class);
-                startActivity(navigateToSystemMenuIntent);
-            }
-        });
     }
 
     private void findViews() {
@@ -386,8 +386,6 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
         searchFieldPlaceholderImage = (ImageView)
                 findViewById(R.id.mainActivity_searchFieldPlaceholderImage);
 
-        systemMenuButton = (Button) findViewById(R.id.mainMenuActivity_systemMenuButton);
-
         backgroundImageView = (ImageView) findViewById(R.id.mainMenuActivity_backgroundImageView);
     }
 
@@ -397,5 +395,47 @@ public class MainMenu extends ActionBarActivity implements IabBroadcastReceiver.
         it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
        ct. startActivity(it);
 
+    }
+
+    //// PRIVATE
+
+    public void initSystemMenu() {
+        navigationDrawer = (DrawerLayout) findViewById(R.id.mainMenuActivity_drawerLayout);
+
+        ImageButton navigationImageButton = (ImageButton)
+                findViewById(R.id.mainMenuActivity_navigationImageButton);
+        navigationImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!navigationDrawer.isDrawerOpen(GravityCompat.START)) {
+                    navigationDrawer.openDrawer(Gravity.START, true);
+                }
+            }
+        });
+
+        ImageButton hideNavigationImageButton = (ImageButton)
+                findViewById(R.id.mainMenuActivity_hideNavigationImageButton);
+        hideNavigationImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (navigationDrawer.isDrawerOpen(GravityCompat.START)) {
+                    navigationDrawer.closeDrawer(Gravity.START, true);
+                }
+            }
+        });
+
+        TextViewRobotoRegular changeSkinsTextView = (TextViewRobotoRegular)
+                findViewById(R.id.mainMenuActivity_changeSkinsTextView);
+        changeSkinsTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                ChangeSkinFragment fragment = new ChangeSkinFragment();
+                fragmentTransaction.add(R.id.mainMenuActivity_rootLayout, fragment);
+                fragmentTransaction.commit();
+                navigationDrawer.closeDrawer(Gravity.START, true);
+            }
+        });
     }
 }

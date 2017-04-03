@@ -1,282 +1,301 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainMenuActivity_drawerLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/black">
+    android:layout_height="match_parent">
 
-    <!-- BACKGROUND IMAGE -->
-    <ImageView
-        android:id="@+id/mainMenuActivity_backgroundImageView"
+    <!-- The main content view -->
+    <RelativeLayout
+        android:id="@+id/mainMenuActivity_rootLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/general_background"
-        android:scaleType="fitXY"
-        android:contentDescription="@string/content_description" />
+        android:background="@android:color/black">
 
-    <!-- LOGO -->
-    <ImageView
-        android:id="@+id/inner_logo"
-        android:layout_width="match_parent"
-        android:layout_height="24dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/general_background_logo"
-        android:contentDescription="@string/content_description" />
-
-    <!-- DUMMY TO PREVENT AUTO FOCUS -->
-    <View
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:layout_width="0px"
-        android:layout_height="0px" />
-
-    <!-- SEARCH FIELD -->
-    <FrameLayout
-        android:id="@+id/inner_searchGroup"
-        android:layout_width="280dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/inner_logo"
-        android:layout_marginTop="24dp"
-        android:layout_centerHorizontal="true">
-
+        <!-- BACKGROUND IMAGE -->
         <ImageView
-            android:id="@+id/mainActivity_searchFieldPlaceholderImage"
-            android:layout_width="96dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:background="@drawable/search_field_placeholder"
-            android:contentDescription="@string/content_description" />
-
-        <EditText
-            android:id="@+id/main_menu_search_field"
+            android:id="@+id/mainMenuActivity_backgroundImageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:background="@drawable/search_field_contour"
-            android:inputType="text"
-            android:textCursorDrawable="@null"
-            android:textColor="@android:color/white" />
+            android:src="@drawable/general_background"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/content_description" />
 
-    </FrameLayout>
+        <ImageButton
+            android:id="@+id/mainMenuActivity_navigationImageButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/menu_icon"
+            android:contentDescription="@string/content_description" />
 
-    <Button
-        android:id="@+id/mainMenuActivity_systemMenuButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/inner_searchGroup"
-        android:layout_centerHorizontal="true"
-        android:text="System Menu" />
+        <!-- LOGO -->
+        <ImageView
+            android:id="@+id/inner_logo"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/general_background_logo"
+            android:contentDescription="@string/content_description" />
 
-    <!-- BUTTONS -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="24dp">
+        <!-- DUMMY TO PREVENT AUTO FOCUS -->
+        <View
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="0px"
+            android:layout_height="0px" />
 
-        <!-- RANDOMIZER -->
-        <LinearLayout
-            android:id="@+id/main_menu_randomizer_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:layout_marginBottom="8dp">
+        <!-- SEARCH FIELD -->
+        <FrameLayout
+            android:id="@+id/inner_searchGroup"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/inner_logo"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true">
 
             <ImageView
+                android:id="@+id/mainActivity_searchFieldPlaceholderImage"
                 android:layout_width="96dp"
-                android:layout_height="96dp"
-                android:background="@drawable/randomizer_icon"
-                android:contentDescription="@string/content_description"/>
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/search_field_placeholder"
+                android:contentDescription="@string/content_description" />
 
-            <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+            <EditText
+                android:id="@+id/main_menu_search_field"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/search_field_contour"
+                android:inputType="text"
+                android:textCursorDrawable="@null"
+                android:textColor="@android:color/white" />
+
+        </FrameLayout>
+
+        <!-- BUTTONS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24dp">
+
+            <!-- RANDOMIZER -->
+            <LinearLayout
+                android:id="@+id/main_menu_randomizer_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
-                android:text="RANDOMIZER" />
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:background="@drawable/randomizer_icon"
+                    android:contentDescription="@string/content_description"/>
+
+                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="RANDOMIZER" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <!-- RULES -->
+                <LinearLayout
+                    android:id="@+id/main_menu_rules_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:background="@drawable/rules_icon"
+                        android:contentDescription="@string/content_description"/>
+
+                    <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:text="RULES" />
+
+                </LinearLayout>
+
+                <!-- ARMORY -->
+                <LinearLayout
+                    android:id="@+id/main_menu_armory_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:background="@drawable/armory_icon"
+                        android:contentDescription="@string/content_description"/>
+
+                    <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:text="ARMORY" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- FRACTION RULES -->
+                <LinearLayout
+                    android:id="@+id/main_menu_fraction_rules_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:background="@drawable/fraction_rules_icon"
+                        android:contentDescription="@string/content_description"/>
+
+                    <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:text="FRACTION RULES" />
+
+                </LinearLayout>
+
+                <!-- CHARTS AND TABLES -->
+                <LinearLayout
+                    android:id="@+id/main_menu_chart_tables_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:background="@drawable/charts_tables_icon"
+                        android:contentDescription="@string/content_description"/>
+
+                    <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:text="CHARTS AND TABLES" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
+    </RelativeLayout>
+
+    <!-- The navigation drawer -->
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:orientation="vertical"
+        android:background="@android:color/black">
+
+        <ImageButton
+            android:id="@+id/mainMenuActivity_hideNavigationImageButton"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="72dp"
+            android:background="@drawable/menu_arrow_left"
+            android:contentDescription="@string/content_description" />
+
+        <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+            android:id="@+id/mainMenuActivity_accountTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:text="Account"
+            android:paddingLeft="24dp"
+            android:paddingStart="24dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            tools:ignore="RtlSymmetry" />
 
-            <!-- RULES -->
-            <LinearLayout
-                android:id="@+id/main_menu_rules_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal">
-
-                <ImageView
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
-                    android:background="@drawable/rules_icon"
-                    android:contentDescription="@string/content_description"/>
-
-                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
-                    android:text="RULES" />
-
-            </LinearLayout>
-
-            <!-- ARMORY -->
-            <LinearLayout
-                android:id="@+id/main_menu_armory_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal">
-
-                <ImageView
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
-                    android:background="@drawable/armory_icon"
-                    android:contentDescription="@string/content_description"/>
-
-                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
-                    android:text="ARMORY" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
+        <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+            android:id="@+id/mainMenuActivity_changeSkinsTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:text="Change Skins"
+            android:paddingLeft="24dp"
+            android:paddingStart="24dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            tools:ignore="RtlSymmetry" />
 
-            <!-- FRACTION RULES -->
-            <LinearLayout
-                android:id="@+id/main_menu_fraction_rules_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal">
+        <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+            android:id="@+id/mainMenuActivity_termsOfServiceTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:text="Terms of Service"
+            android:paddingLeft="24dp"
+            android:paddingStart="24dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            tools:ignore="RtlSymmetry" />
 
-                <ImageView
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
-                    android:background="@drawable/fraction_rules_icon"
-                    android:contentDescription="@string/content_description"/>
-
-                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
-                    android:text="FRACTION RULES" />
-
-            </LinearLayout>
-
-            <!-- CHARTS AND TABLES -->
-            <LinearLayout
-                android:id="@+id/main_menu_chart_tables_button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center_horizontal">
-
-                <ImageView
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
-                    android:background="@drawable/charts_tables_icon"
-                    android:contentDescription="@string/content_description"/>
-
-                <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
-                    android:text="CHARTS AND TABLES" />
-
-            </LinearLayout>
-
-        </LinearLayout>
+        <com.tesseractumstudios.warhammer_artofwar.util.font.roboto.TextViewRobotoRegular
+            android:id="@+id/mainMenuActivity_contactUsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:text="Contact Us"
+            android:paddingLeft="24dp"
+            android:paddingStart="24dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            tools:ignore="RtlSymmetry" />
 
     </LinearLayout>
 
-</RelativeLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        style="@style/root"
-        tools:context=".MainMenu"
-        android:background="@color/black">
-    <ImageView style="@style/main_menu_background"
-            android:id="@+id/bg"
-            android:src="@drawable/menu_1200x1920"/>
-    <LinearLayout style="@style/root.ll_vertical.center_horizontal">
-        <Space style="@style/main_menu_wide_vertical_space"
-                android:layout_weight="200"/>
-        <FrameLayout style="@style/main_menu_search_layout">
-            <EditText style="@style/main_menu_search_field"
-                    android:id="@+id/main_menu_search_field"/>
-        </FrameLayout>
-        <Space style="@style/main_menu_wide_vertical_space"
-                android:layout_weight="463"/>
-        <LinearLayout style="@style/main_menu_ll_buttons"
-                android:id="@+id/ll">
-            <LinearLayout style="@style/main_menu_wide_buttons_line">
-                <Space style="@style/main_menu_wide_side_space"/>
-                <ImageButton style="@style/main_menu_wide_button"
-                        android:layout_weight="273"
-                        android:id="@+id/main_menu_randomizer_button"
-                        android:src="@drawable/randomizer_long_wide"/>
-                <Space style="@style/main_menu_wide_side_space"/>
-            </LinearLayout>
-            <LinearLayout style="@style/main_menu_wide_buttons_line">
-                <Space style="@style/main_menu_wide_side_space"/>
-                <ImageButton style="@style/main_menu_wide_button"
-                        android:id="@+id/main_menu_rules_button"
-                        android:src="@drawable/rules_wide"/>
-                <Space style="@style/main_menu_wide_center_space"/>
-                <ImageButton style="@style/main_menu_wide_button"
-                        android:id="@+id/main_menu_fraction_rules_button"
-                        android:src="@drawable/fractionrules_wide"/>
-                <Space style="@style/main_menu_wide_side_space"/>
-            </LinearLayout>
-            <LinearLayout style="@style/main_menu_wide_buttons_line">
-                <Space style="@style/main_menu_wide_side_space"/>
-                <ImageButton style="@style/main_menu_wide_button"
-                        android:id="@+id/main_menu_armory_button"
-                        android:src="@drawable/armory_wide"/>
-                <Space style="@style/main_menu_wide_center_space"/>
-                <ImageButton style="@style/main_menu_wide_button"
-                        android:id="@+id/main_menu_chart_tables_button"
-                        android:src="@drawable/chart_tables_wide"/>
-                <Space style="@style/main_menu_wide_side_space"/>
-            </LinearLayout>
-        </LinearLayout>
-        <Space style="@style/main_menu_wide_vertical_space"
-                android:layout_weight="166"/>
-    </LinearLayout>
-</FrameLayout> -->
+</android.support.v4.widget.DrawerLayout>
